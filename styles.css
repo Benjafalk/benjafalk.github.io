@@ -6,6 +6,7 @@
 }
 
 body {
+    font-family: 'Arial', sans-serif;
     background-image: url('nature-background.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -40,8 +41,13 @@ nav ul li a:hover {
 }
 
 main {
-    text-align: center;
-    padding: 10% 0;
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    padding: 10% 5%;
+}
+
+.intro {
+    max-width: 50%; /* Limits the width of the text to prevent overflow */
 }
 
 .intro h1 {
@@ -54,20 +60,9 @@ main {
     color: #FEFFFF;
 }
 
-.colors h3 {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    color: #3AAFA9;
-}
-
-.colors ul {
-    list-style: none;
-    margin-top: 1rem;
-}
-
-.colors ul li {
-    color: #FEFFFF;
-    font-size: 1rem;
+/* Hide the colors section */
+.colors {
+    display: none;
 }
 
 footer {
