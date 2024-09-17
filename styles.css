@@ -14,7 +14,7 @@ body {
     height: 100vh; /* Ensures the body takes up the full viewport height */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Makes footer stay at the bottom */
+    justify-content: space-between; /* Keeps footer at the bottom */
 }
 
 header {
@@ -53,22 +53,25 @@ main {
 }
 
 .intro {
-    max-width: 40%;
+    max-width: 40%; /* Limits the width to 40% of the page */
+    width: 40%;
+    height: 300px; /* Set a fixed height to create a square or near square textbox */
+    padding: 20px;
+    background-color: rgba(23, 37, 42, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for styling */
+    overflow-y: auto; /* Allow vertical scrolling if text exceeds the height */
+    color: #FEFFFF;
 }
 
 .intro h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-bottom: 10px;
     color: #DEF2F1;
 }
 
 .intro p {
-    font-size: 1.5rem;
-    color: #FEFFFF;
-}
-
-/* Hide the color schemes section */
-.colors {
-    display: none;
+    font-size: 1.2rem;
 }
 
 /* Footer section */
