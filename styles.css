@@ -94,3 +94,37 @@ footer a:hover {
     color: #3AAFA9;
     opacity: 1;
 }
+
+/* Loader Styles */
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23, 37, 42, 0.9); /* Background overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the loader is on top of all elements */
+}
+
+#loader .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #2B7A78;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+}
+
+/* Keyframes for the spinning animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide the loader once the page is loaded */
+body.loaded #loader {
+    display: none;
+}

@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    
     <header>
         <nav>
             <ul>
@@ -33,5 +37,30 @@
         <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
     </footer>
+    <script>
+        // Function to remove the loader after the page loads
+        window.addEventListener('load', function() {
+            // Add the 'loaded' class to the body when the page is fully loaded
+            document.body.classList.add('loaded');
+        });
+    
+        // Function to show the loader before navigating to another page
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();  // Prevent default navigation
+    
+                const href = this.getAttribute('href');  // Get the link's href
+    
+                // Show the loader
+                document.body.classList.remove('loaded');
+    
+                // Simulate a delay before navigating to the next page
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 500);  // Adjust the delay as necessary (in milliseconds)
+            });
+        });
+    </script>
+    
 </body>
 </html>
