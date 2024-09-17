@@ -11,6 +11,10 @@ body {
     background-size: cover;
     background-attachment: fixed;
     color: #FEFFFF;
+    height: 100vh; /* Ensures the body takes up the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Makes footer stay at the bottom */
 }
 
 header {
@@ -40,14 +44,16 @@ nav ul li a:hover {
     color: #3AAFA9;
 }
 
+/* Main section */
 main {
+    flex-grow: 1;
     display: flex;
-    justify-content: flex-start; /* Aligns content to the left */
-    padding: 10% 5%;
+    align-items: flex-start;
+    padding: 50px;
 }
 
 .intro {
-    max-width: 50%; /* Limits the width of the text to prevent overflow */
+    max-width: 40%;
 }
 
 .intro h1 {
@@ -60,16 +66,17 @@ main {
     color: #FEFFFF;
 }
 
-/* Hide the colors section */
+/* Hide the color schemes section */
 .colors {
     display: none;
 }
 
+/* Footer section */
 footer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 2rem;
+    padding: 20px;
+    background-color: rgba(23, 37, 42, 0.9);
 }
 
 footer a {
