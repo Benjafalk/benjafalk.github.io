@@ -1,112 +1,76 @@
-/* Basic Reset */
-* {
+/* General styles (for desktop and larger screens) */
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('nature-background.jpg');
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-    color: #FEFFFF;
-    height: 100vh; /* Ensures the body takes up the full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Keeps footer at the bottom */
 }
 
 header {
-    background-color: rgba(23, 37, 42, 0.9);
-    padding: 1rem 2rem;
-    text-align: center;
+    background-color: rgba(23, 37, 42, 0.7);
+    padding: 15px;
+    text-align: right;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
+    margin-left: 20px;
 }
 
 nav ul li a {
+    color: #ffffff;
     text-decoration: none;
-    color: #FEFFFF;
     font-size: 18px;
-    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #3AAFA9;
-}
-
-/* Main section */
-main {
-    flex-grow: 1;
-    display: flex;
-    align-items: flex-start;
-    padding: 50px;
+    color: #2B7A78;
 }
 
 .intro {
-    max-width: 40%; /* Limits the width to 40% of the page */
-    width: 40%;
-    height: 300px; /* Set a fixed height to create a square or near square textbox */
+    width: 40%; /* Limit the width for larger screens */
     padding: 20px;
-    background-color: rgba(23, 37, 42, 0.7); /* Semi-transparent background */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for styling */
-    overflow-y: auto; /* Allow vertical scrolling if text exceeds the height */
-    color: #FEFFFF;
+    background-color: rgba(23, 37, 42, 0.8);
+    color: #ffffff;
+    margin: 50px 0 0 30px; /* Align the text to the left */
 }
 
-.intro h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #DEF2F1;
-}
-
-.intro p {
-    font-size: 1.2rem;
-}
-
-/* Footer section */
 footer {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: rgba(23, 37, 42, 0.9);
 }
 
 footer a {
-    margin: 0 15px;
-    font-size: 2rem;
-    color: #FEFFFF;
-    opacity: 0.8;
-    text-decoration: none;
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 24px;
 }
 
-footer a:hover {
-    color: #3AAFA9;
-    opacity: 1;
-}
-
-/* Loader Styles */
 #loader {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(23, 37, 42, 0.9); /* Background overlay */
+    background-color: rgba(23, 37, 42, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Ensure the loader is on top of all elements */
+    z-index: 9999;
 }
 
 #loader .spinner {
@@ -118,13 +82,59 @@ footer a:hover {
     animation: spin 1.5s linear infinite;
 }
 
-/* Keyframes for the spinning animation */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* Hide the loader once the page is loaded */
 body.loaded #loader {
     display: none;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block; /* Stack the navigation links vertically */
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .intro {
+        width: 80%; /* Make the intro section wider on smaller screens */
+        margin: 30px auto; /* Center the intro text on mobile */
+        padding: 15px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    footer a {
+        font-size: 20px; /* Slightly smaller social icons on mobile */
+    }
+}
+
+/* Smaller mobile screens (e.g., phones in portrait mode) */
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 5px 0; /* Less space between menu items */
+    }
+
+    .intro {
+        width: 90%; /* Almost full-width on smaller screens */
+        font-size: 16px;
+    }
+
+    footer a {
+        font-size: 18px; /* Adjust social icons for small screens */
+    }
 }
