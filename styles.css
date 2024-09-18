@@ -59,6 +59,29 @@ footer a {
     color: #ffffff;
     margin: 0 10px;
     font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for social media icons */
+footer a:hover {
+    color: #3498db; /* Default hover color */
+}
+
+/* Custom hover colors for each icon */
+footer a:hover i.fa-linkedin {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+footer a:hover i.fa-facebook {
+    color: #3b5998; /* Facebook blue */
+}
+
+footer a:hover i.fa-instagram {
+    color: #e4405f; /* Instagram pink */
+}
+
+footer a:hover i.fa-github {
+    color: #333; /* GitHub dark grey */
 }
 
 #loader {
