@@ -7,12 +7,13 @@ body {
     background-size: cover;
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Keeps text above the Pacman */
 }
 
 /* Pacman animation styles */
 .container {
     display: flex;
+    flex-direction: column-reverse; /* Pacman goes below the text */
     align-items: center;
     justify-content: flex-end; /* Moves Pacman to the right */
     overflow: hidden;
@@ -54,9 +55,9 @@ body {
 
 .path {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     animation: eating-path 4s linear infinite; /* Slower movement */
-    width: 200%; /* Wider path for more dots */
+    width: 300%; /* Wider path for more dots */
 }
 
 /* Adding more dots to the path */
@@ -67,7 +68,16 @@ body {
     content: "";
     height: 1rem;
     width: 1rem;
-    margin-right: 2rem; /* Space between dots */
+    margin-right: 1rem; /* Reduce space between dots */
+}
+
+/* More dots */
+.path span {
+    background: #fff;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
 }
 
 /* Duplicate ::after for more dots */
@@ -83,12 +93,10 @@ body {
     border-radius: 50%;
     height: 1rem;
     width: 1rem;
-    margin-right: 2rem; /* More dots added */
 }
 
 @keyframes chunk-top {
-    0%,
-    100% {
+    0%, 100% {
         transform: rotate(-45deg);
     }
     50% {
@@ -97,8 +105,7 @@ body {
 }
 
 @keyframes chunk-bottom {
-    0%,
-    100% {
+    0%, 100% {
         transform: rotate(-40deg);
     }
     50% {
@@ -111,7 +118,7 @@ body {
         transform: translateX(50%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-150%); /* Pacman eats more dots */
     }
 }
 
@@ -149,7 +156,7 @@ nav ul li a:hover {
     padding: 20px;
     background-color: rgba(23, 37, 42, 0.8);
     color: #ffffff;
-    margin: 50px 0 0 30px; /* Align the text to the top left */
+    margin: 30px 0 0 30px; /* Align the text to the top left */
 }
 
 footer {
@@ -173,7 +180,6 @@ footer a:hover {
     color: #3498db; /* Default hover color */
 }
 
-/* Custom hover colors for each icon */
 footer a:hover i.fa-linkedin {
     color: #0077b5; /* LinkedIn blue */
 }
