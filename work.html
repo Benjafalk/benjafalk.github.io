@@ -67,3 +67,57 @@
     
 </body>
 </html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work - Benjamin Falk Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="work.html">Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content fade-in">
+            <h1>My Work</h1>
+            <p>Here is an overview of my projects and work:</p>
+            <p>1. UAV-based Radio Frequency Jammer Locator</p>
+            <p>2. Local Power Distribution Grid Controller</p>
+            <p>3. Detection of Suspicious IP Traffic</p>
+            <p>4. Securing Water Distribution Networks</p>
+        </div>
+    </main>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/benjamin.falk.98" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/benjafalk/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Benjafalk" target="_blank"><i class="fab fa-github"></i></a>
+    </footer>
+
+    <script>
+        window.addEventListener('load', function() {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            fadeInElements.forEach(el => {
+                el.classList.add('visible');
+            });
+        });
+    </script>
+</body>
+</html>

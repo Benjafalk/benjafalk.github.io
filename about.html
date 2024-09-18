@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Falk Portfolio - About</title>
+    <title>About - Benjamin Falk Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
-    
     <header>
         <nav>
             <ul>
@@ -24,7 +21,7 @@
     </header>
 
     <main>
-        <div class="intro">
+        <div class="content fade-in">
             <h1>About Me</h1>
             <p>I am Benjamin Falk, a Computer Engineering student in my 5th semester at AAU. I'm passionate about technology and software development. I am currently working as a student ambassador, where i promote the University as well as the Department of Electronic Systems. Furthermore, 
                 i am working as a student worker, where i help the IT and Administration section of the University, with various tasks and problems.
@@ -40,30 +37,14 @@
         <a href="https://www.instagram.com/benjafalk/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://github.com/Benjafalk" target="_blank"><i class="fab fa-github"></i></a>
     </footer>
+
     <script>
-        // Function to remove the loader after the page loads
         window.addEventListener('load', function() {
-            // Add the 'loaded' class to the body when the page is fully loaded
-            document.body.classList.add('loaded');
-        });
-    
-        // Function to show the loader before navigating to another page
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();  // Prevent default navigation
-    
-                const href = this.getAttribute('href');  // Get the link's href
-    
-                // Show the loader
-                document.body.classList.remove('loaded');
-    
-                // Simulate a delay before navigating to the next page
-                setTimeout(function() {
-                    window.location.href = href;
-                }, 300);  // Adjust the delay as necessary (in milliseconds)
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            fadeInElements.forEach(el => {
+                el.classList.add('visible');
             });
         });
     </script>
-    
 </body>
 </html>
