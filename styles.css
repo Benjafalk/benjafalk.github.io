@@ -8,7 +8,6 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 
 /* Pacman animation styles */
@@ -17,12 +16,9 @@ body {
     align-items: center;
     justify-content: flex-end; /* Moves Pacman to the right */
     overflow: hidden;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    height: 20vh;
-    width: 50%; /* Adjust width as needed */
+    height: 50vh;
+    width: 80%; /* Adjust width as needed */
+    margin-top: 50px; /* Adjust as necessary */
 }
 
 .pacman {
@@ -59,32 +55,37 @@ body {
 .path {
     display: flex;
     justify-content: space-around;
-    animation: eating-path 5s linear infinite; /* Slower movement */
+    animation: eating-path 4s linear infinite; /* Slower movement */
     width: 200%; /* Wider path for more dots */
 }
 
-/* Add more dots and reduce spacing between them */
-.path::before, 
-.path::after,
-.path span {
+/* Adding more dots to the path */
+.path::before,
+.path::after {
     background: #fff;
     border-radius: 50%;
     content: "";
-    height: 0.75rem;
-    width: 0.75rem;
-    margin-right: 0.5rem; /* Reduce space between dots */
+    height: 1rem;
+    width: 1rem;
+    margin-right: 2rem; /* Space between dots */
 }
 
-/* Duplicating the dots to add more */
-.path span:nth-child(1)::before,
-.path span:nth-child(2)::before,
-.path span:nth-child(3)::before,
-.path span:nth-child(4)::before,
-.path span:nth-child(5)::before {
-    content: "";
+/* Duplicate ::after for more dots */
+.path::before {
+    background: #fff;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
 }
 
-/* Keyframes for Pacman animation */
+.path::after {
+    background: #fff;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 2rem; /* More dots added */
+}
+
 @keyframes chunk-top {
     0%,
     100% {
@@ -114,18 +115,43 @@ body {
     }
 }
 
-/* Intro text styles - position it to the top-left corner */
+header {
+    background-color: rgba(23, 37, 42, 0.7);
+    padding: 15px;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #2B7A78;
+}
+
+/* Intro text styles */
 .intro {
-    width: 40%;
+    width: 40%; /* Limit the width for larger screens */
     padding: 20px;
     background-color: rgba(23, 37, 42, 0.8);
     color: #ffffff;
-    position: absolute;
-    top: 10%;
-    left: 5%; /* Adjust margin to top-left */
+    margin: 50px 0 0 30px; /* Align the text to the top left */
 }
 
-/* Footer and social icons styles */
 footer {
     text-align: center;
     padding: 10px;
@@ -147,6 +173,7 @@ footer a:hover {
     color: #3498db; /* Default hover color */
 }
 
+/* Custom hover colors for each icon */
 footer a:hover i.fa-linkedin {
     color: #0077b5; /* LinkedIn blue */
 }
@@ -163,7 +190,6 @@ footer a:hover i.fa-github {
     color: #333; /* GitHub dark grey */
 }
 
-/* Loader styles */
 #loader {
     position: fixed;
     left: 0;
