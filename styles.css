@@ -197,7 +197,7 @@ h1, h2, p {
 /* Remove white-space: nowrap to allow text wrapping */
 h1, h2, p {
     white-space: normal; /* Allow text to wrap to new lines */
-    width: auto; /* Let the width of the element adjust to its content */
+    width: 100%; /* Let the width of the element adjust to its content */
 }
 
 /* Animation for typing effect */
