@@ -177,36 +177,39 @@ body.loaded #loader {
     }
 }
 
-/* Typing effect for h1, h2, and p tags */
+/* Typing effect for h1, h2, and p */
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-/* Base styles */
+/* Base styles for h1, h2, and p */
 h1, h2, p {
-    border-right: solid 3px rgba(0,255,0,.75);
+    border-right: solid 3px rgba(0, 255, 0, .75);  /* Green cursor */
     white-space: nowrap;
     overflow: hidden;
-    font-family: 'Source Code Pro', monospace;  
-    font-size: 28px;
-    color: rgba(255,255,255,.70);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 28px;  /* Adjust the size as needed */
+    color: rgba(255, 255, 255, .70);
     margin: 0 auto;
-    text-align: center;
-    max-width: 80%; /* Keep text centered and limited in width */
 }
 
-/* Animation for typing effect */
+/* Animation for h1, h2, and p */
 h1, h2, p {
-    animation: animated-text 4s steps(29, end) 1s 1 normal both, 
+    animation: animated-text 4s steps(29, end) 1s 1 normal both,
                animated-cursor 600ms steps(29, end) infinite;
 }
 
-/* Text animation */
+/* Text animation for h1, h2, and p */
 @keyframes animated-text {
     from { width: 0; }
-    to { width: 100%; } /* Adjust width to match the longest text */
+    to { width: 100%; } /* Ensures full width of text is shown */
 }
 
-/* Cursor animation */
+/* Cursor animation for h1, h2, and p */
 @keyframes animated-cursor {
-    from { border-right-color: rgba(0,255,0,.75); }
+    from { border-right-color: rgba(0, 255, 0, .75); }
     to { border-right-color: transparent; }
+}
+
+/* Fix cursor size */
+h1, h2, p {
+    border-right-width: 2px; /* Adjust the width of the cursor */
 }
