@@ -63,6 +63,7 @@ void main() {
 }
 `;
 
+// Compile shader function
 function compileShader(shaderSource, shaderType) {
     var shader = gl.createShader(shaderType);
     gl.shaderSource(shader, shaderSource);
@@ -110,6 +111,14 @@ window.addEventListener('resize', function () {
     gl.viewport(0, 0, canvas.width, canvas.height);
     gl.uniform1f(widthHandle, window.innerWidth);
     gl.uniform1f(heightHandle, window.innerHeight);
+});
+
+// Updated: Ensure loader hides after content is ready
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.getElementById('loader').style.display = 'none';
+        document.body.classList.add('loaded');
+    }, 500); // Adjust the delay as needed
 });
 
 var lastFrame = Date.now();
