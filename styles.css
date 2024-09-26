@@ -6,6 +6,13 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 canvas {
@@ -16,7 +23,6 @@ canvas {
     height: 100%;
     z-index: -1; /* Make sure the canvas is behind the content */
 }
-
 
 header {
     background-color: rgba(23, 37, 42, 0.7);
