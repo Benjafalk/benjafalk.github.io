@@ -180,28 +180,29 @@ body.loaded #loader {
 /* General styles for h1, h2, and p */
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-/* Base styles */
-h1, h2, p {
+/* Base styles for intro content */
+.intro h1, .intro h2, .intro p {
     font-family: 'Source Code Pro', monospace;
     font-size: 28px; /* Adjust as needed */
     color: rgba(255, 255, 255, .70);
     white-space: nowrap;
     overflow: hidden;
-    border-right: solid 2px rgba(0, 255, 0, .75); /* Match cursor size */
-    display: inline-block; /* Ensures cursor sticks to the text */
     margin: 0 auto;
+    display: inline-block; /* Ensures elements are treated as inline */
 }
 
-/* Animation for typing and cursor effect */
-h1, h2, p {
-    animation: animated-text 4s steps(100, end) 1s 1 normal both, /* Extend steps for longer text */
+/* Ensure the whole intro section has typing animation */
+.intro {
+    border-right: solid 2px rgba(0, 255, 0, .75); /* Cursor effect */
+    display: inline-block; /* To keep the cursor at the end of the text */
+    animation: animated-text 6s steps(100, end) 1s 1 normal both, 
                animated-cursor 600ms steps(29, end) infinite;
 }
 
 /* Text typing animation */
 @keyframes animated-text {
     from { width: 0; }
-    to { width: 100%; } /* Allow full width to accommodate long text */
+    to { width: 100%; } /* Display all the text */
 }
 
 /* Cursor blink animation */
@@ -210,9 +211,16 @@ h1, h2, p {
     to { border-right-color: transparent; }
 }
 
-/* Ensure cursor size matches font size */
-h1, h2, p {
-    border-right-width: 2px; /* Smaller, more proportionate cursor */
-    height: auto; /* Allow auto height to match text */
+/* Adjust the cursor size to match the font */
+.intro {
+    border-right-width: 2px;
+    height: auto;
 }
+
+/* Ensure each line (h1, h2, p) has enough space */
+.intro h1, .intro h2, .intro p {
+    width: 100%; /* Ensure text takes full width */
+}
+
+
 
