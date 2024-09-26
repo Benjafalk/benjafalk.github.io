@@ -8,7 +8,6 @@ body {
     flex-direction: column;
 }
 
-
 header {
     background-color: rgba(23, 37, 42, 0.7);
     padding: 15px;
@@ -110,7 +109,9 @@ footer a:hover i.fa-github {
     100% { transform: rotate(360deg); }
 }
 
-
+body.loaded #loader {
+    display: block;
+}
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
