@@ -186,17 +186,17 @@ h1, h2, p {
     white-space: nowrap;
     overflow: hidden;
     font-family: 'Source Code Pro', monospace;  
-    font-size: 28px;
+    font-size: 24px;
     color: rgba(255,255,255,.70);
     margin: 0 auto;
     text-align: center;
-    max-width: 80%; /* Keep text centered and limited in width */
+    max-width: 100%; /* Keep text centered and limited in width */
 }
 
 /* Animation for typing effect */
 h1, h2, p {
     animation: animated-text 4s steps(29, end) 1s 1 normal both, 
-               animated-cursor 600ms steps(29, end) infinite;
+               animated-cursor 800ms steps(29, end) infinite;
 }
 
 /* Text animation */
