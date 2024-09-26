@@ -126,7 +126,7 @@ footer a:hover i.fa-github {
 }
 
 body.loaded #loader {
-    display: block;
+    display: none;
 }
 
 /* Mobile-specific styles */
