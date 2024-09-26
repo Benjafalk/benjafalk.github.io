@@ -8,6 +8,16 @@ body {
     flex-direction: column;
 }
 
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Make sure the canvas is behind the content */
+}
+
+
 header {
     background-color: rgba(23, 37, 42, 0.7);
     padding: 15px;
@@ -110,7 +120,7 @@ footer a:hover i.fa-github {
 }
 
 body.loaded #loader {
-    display: block;
+    display: none;
 }
 
 /* Mobile-specific styles */
