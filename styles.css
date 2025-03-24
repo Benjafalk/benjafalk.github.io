@@ -3,120 +3,120 @@
 
 /* General styles */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  animation: fadeIn 1s forwards; /* Fade-in effect */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in effect */
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Background canvas */
 canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 /* Header styles */
 header {
-  background-color: rgba(23, 37, 42, 0.7);
-  padding: 15px;
-  text-align: right;
+    background-color: rgba(23, 37, 42, 0.7);
+    padding: 15px;
+    text-align: right;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-  display: inline;
-  margin-left: 20px;
+    display: inline;
+    margin-left: 20px;
 }
 
 nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s ease;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #2B7A78;
+    color: #2B7A78;
 }
 
 /* Intro box */
 .intro {
-  width: 60%;
-  max-width: 800px;
-  padding: 20px;
-  background-color: rgba(23, 37, 42, 0.8);
-  color: #ffffff;
-  margin: 50px auto;
+    width: 60%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(23, 37, 42, 0.8);
+    color: #ffffff;
+    margin: 50px auto;
 }
 
-/* Typing effect only on #intro-text */
+/* Single typing effect element */
 #intro-text {
-  border-right: solid 3px rgba(0, 255, 0, 0.75);
-  overflow: hidden;
-  white-space: pre-wrap; /* preserves line breaks; use pre-line if you don't want indentation preserved */
-  font-family: 'Source Code Pro', monospace;
-  font-size: 24px;
-  color: rgba(255, 255, 255, 0.7);
-  width: 0; /* start at 0 for the typing effect */
-  
-  /* Adjust the timing and steps (set steps to roughly the character count) */
-  animation: animated-text 4s steps(90, end) 1s 1 normal both,
-             animated-cursor 1s steps(1, end) infinite;
-  
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
-  text-align: left;
+    border-right: solid 3px rgba(0, 255, 0, 0.75);
+    overflow: hidden;
+    white-space: pre-wrap;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    width: 0; /* Start at zero width for typing animation */
+    
+    /* Adjust these animation values as you like */
+    animation: animated-text 4s steps(90, end) 1s 1 normal both,
+               animated-cursor 1s steps(1, end) infinite;
+    
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: left;
 }
 
 @keyframes animated-text {
-  from { width: 0; }
-  to { width: 100%; }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
 @keyframes animated-cursor {
-  0%   { border-right-color: rgba(0, 255, 0, 0.75); }
-  50%  { border-right-color: transparent; }
-  100% { border-right-color: rgba(0, 255, 0, 0.75); }
+    0%   { border-right-color: rgba(0, 255, 0, 0.75); }
+    50%  { border-right-color: transparent; }
+    100% { border-right-color: rgba(0, 255, 0, 0.75); }
 }
 
-/* Footer styles */
+/* Footer */
 footer {
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(23, 37, 42, 0.9);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(23, 37, 42, 0.9);
 }
 
 footer a {
-  color: #ffffff;
-  margin: 0 10px;
-  font-size: 24px;
-  transition: color 0.1s ease;
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.1s ease;
 }
 
 footer a:hover {
-  color: #3498db;
+    color: #3498db;
 }
 
 footer a:hover i.fa-linkedin { color: #0077b5; }
@@ -124,83 +124,82 @@ footer a:hover i.fa-facebook { color: #3b5998; }
 footer a:hover i.fa-instagram { color: #e4405f; }
 footer a:hover i.fa-github { color: #333; }
 
-/* Loader styles */
+/* Loader */
 #loader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(23, 37, 42, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23, 37, 42, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
 #loader .spinner {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #2B7A78;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1.5s linear infinite;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #2B7A78;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 body.loaded #loader {
-  display: none;
+    display: none;
 }
 
-/* Responsive styles */
-/* Tablets */
+/* Responsive: Tablets */
 @media (max-width: 768px) {
-  header {
-    text-align: center;
-    padding: 10px;
-  }
-  
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  nav ul li a {
-    font-size: 20px;
-  }
-  
-  .intro {
-    width: 80%;
-    margin: 30px auto;
-    padding: 15px;
-  }
-  
-  footer {
-    padding: 10px;
-    font-size: 18px;
-  }
-  
-  footer a {
-    font-size: 20px;
-  }
+    header {
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .intro {
+        width: 80%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    footer a {
+        font-size: 20px;
+    }
 }
 
-/* Small phones */
+/* Responsive: Small phones */
 @media (max-width: 480px) {
-  nav ul li {
-    margin: 5px 0;
-  }
-  
-  .intro {
-    width: 90%;
-    font-size: 16px;
-  }
-  
-  footer a {
-    font-size: 18px;
-  }
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .intro {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    footer a {
+        font-size: 18px;
+    }
 }
