@@ -57,7 +57,7 @@ nav ul li a:hover {
     color: #2B7A78;
 }
 
-/* Typing intro box */
+/* Intro box */
 .intro {
     width: 60%;
     max-width: 800px;
@@ -67,7 +67,7 @@ nav ul li a:hover {
     margin: 50px auto;
 }
 
-/* Typing effect */
+/* Single typing effect element */
 #intro-text {
     border-right: solid 3px rgba(0, 255, 0, 0.75);
     overflow: hidden;
@@ -75,9 +75,12 @@ nav ul li a:hover {
     font-family: 'Source Code Pro', monospace;
     font-size: 24px;
     color: rgba(255, 255, 255, 0.7);
-    width: 0;
-    animation: animated-text 4s steps(90, end) 1s 1 normal both, 
-               animated-cursor 1000ms steps(29, end) infinite;
+    width: 0; /* Start at zero width for typing animation */
+    
+    /* Adjust these animation values as you like */
+    animation: animated-text 4s steps(90, end) 1s 1 normal both,
+               animated-cursor 1s steps(1, end) infinite;
+    
     max-width: 100%;
     margin: 0 auto;
     display: block;
@@ -90,8 +93,9 @@ nav ul li a:hover {
 }
 
 @keyframes animated-cursor {
-    from { border-right-color: rgba(0, 255, 0, 0.75); }
-    to { border-right-color: transparent; }
+    0%   { border-right-color: rgba(0, 255, 0, 0.75); }
+    50%  { border-right-color: transparent; }
+    100% { border-right-color: rgba(0, 255, 0, 0.75); }
 }
 
 /* Footer */
