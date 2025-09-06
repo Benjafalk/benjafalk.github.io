@@ -14,44 +14,74 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+...
 
-canvas {
+/* Navigation styles */
+.header {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    z-index: -1; /* Make sure the canvas is behind the content */
+    background-color: rgba(23, 37, 42, 0.95);
+    color: #ffffff;
+    z-index: 10;
+    padding: 10px 0;
 }
 
-header {
-    background-color: rgba(23, 37, 42, 0.7);
-    padding: 15px;
-    text-align: right;
+.header-content {
+    margin: 0 10px;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.header-left {
+    float: left;
 }
 
-nav ul li {
-    display: inline;
-    margin-left: 20px;
+.header-right {
+    float: right;
 }
 
-nav ul li a {
+.header a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    margin: 0 15px;
+    font-size: 16px;
 }
 
-nav ul li a:hover {
-    color: #2B7A78;
+.header a:hover {
+    color: #00ff00; /* Highlight on hover */
 }
 
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-controls {
+    display: inline-block;
+}
+
+main {
+    margin-top: 80px; /* Ensures content doesn't overlap with fixed header */
+    position: relative;
+    z-index: 1; /* Keep text above the canvas */
+}
+
+.canvas-container {
+    position: fixed; /* Keeps the canvas fixed in the background */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* canvas covers the whole viewport */
+    z-index: -1; /* canvas stays behind text */
+    pointer-events: none; /* Prevent canvas from blocking clicks */
+}
+
+#webgl-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Intro text box styles */
 .intro {
     width: 40%; /* Limit the width for larger screens */
     padding: 20px;
@@ -65,151 +95,120 @@ footer {
     padding: 10px;
     position: fixed;
     bottom: 0;
-    width: 100%;
-    background-color: rgba(23, 37, 42, 0.9);
+    width: 10
 }
 
-footer a {
-    color: #ffffff;
-    margin: 0 10px;
-    font-size: 24px;
-    transition: color 0.1s ease;
-}
-
-/* Hover effect for social media icons */
-footer a:hover {
-    color: #3498db; /* Default hover color */
-}
-
-/* Custom hover colors for each icon */
-footer a:hover i.fa-linkedin {
-    color: #0077b5; /* LinkedIn blue */
-}
-
-footer a:hover i.fa-facebook {
-    color: #3b5998; /* Facebook blue */
-}
-
-footer a:hover i.fa-instagram {
-    color: #e4405f; /* Instagram pink */
-}
-
-footer a:hover i.fa-github {
-    color: #333; /* GitHub dark grey */
-}
-
-#loader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(23, 37, 42, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-#loader .spinner {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #2B7A78;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    animation: spin 1.5s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-body.loaded #loader {
-    display: none;
-}
-
-/* Mobile-specific styles */
+/* Responsive styles for phones */
 @media (max-width: 768px) {
-    header {
-        text-align: center;
-        padding: 10px;
-    }
-
-    nav ul li {
-        display: block; /* Stack the navigation links vertically */
-        margin: 10px 0;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-
     .intro {
-        width: 80%; /* Make the intro section wider on smaller screens */
-        margin: 30px auto; /* Center the intro text on mobile */
+        width: 80%;
         padding: 15px;
+        margin: 30px auto; /* Center content on smaller screens */
+        font-size: 16px; /* Adjust text size on smaller screens */
+        text-align: left; /* Ensure it remains aligned for readability */
     }
 
-    footer {
-        padding: 10px;
-        font-size: 18px;
+    body {
+        font-size: 14px;
     }
 
-    footer a {
-        font-size: 20px; /* Slightly smaller social icons on mobile */
+    .header {
+        padding: 8px 0;
+    }
+
+    .header a {
+        margin: 0 10px;
+        font-size: 14px;
     }
 }
 
-/* Smaller mobile screens (e.g., phones in portrait mode) */
-@media (max-width: 480px) {
-    nav ul li {
-        margin: 5px 0; /* Less space between menu items */
-    }
+/* Ensure the main content is above the canvas for interaction */
+main {
+    position: relative;
+    z-index: 1;
+    margin-top: 7rem; /* This ensures content isn't hidden by the fixed header */
+}
 
-    .intro {
-        width: 90%; /* Almost full-width on smaller screens */
+/* Styles for About page text box */
+.text-box {
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(23, 37, 42, 0.9);
+    color: #e0e0e0;
+    border-radius: 10px;
+    margin: 50px auto;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .text-box {
+        width: 85%;
+        padding: 15px;
         font-size: 16px;
     }
+}
 
-    footer a {
-        font-size: 18px; /* Adjust social icons for small screens */
+/* Contact page specific styles */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 15px;
+}
+
+.contact-icons a {
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #00ff00; /* Hover effect for icons */
+}
+
+@media (max-width: 768px) {
+    .contact-icons a {
+        font-size: 24px; /* Smaller icons on small screens */
     }
 }
 
-/* Typing effect for h1, h2, and p tags */
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+/* Container to scope typing text */
+.text-container {
+    width: 100%; /* Full width of the parent */
+    max-width: 700px; /* Limits the width of the text area for readability */
+    margin: 0 auto; /* Center the text container */
+    padding: 0 20px; /* Add some padding for spacing */
+}
 
-/* Base styles */
-h1, h2, p {
-    border-right: solid 3px rgba(0,255,0,.75); /* Cursor effect */
+/* Text animation container with wrapping */
+.animated-text-container {
+    display: inline-block; /* Keep the container only as wide as the content */
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    word-wrap: break-word; /* Break long words to avoid overflow */
+    overflow: hidden; /* Hide overflowing content during animation */
+    border-right: 2px solid rgba(0,255,0,.75); /* Green cursor effect */
+}
+
+/* Animation for the text to appear progressively */
+.animated-text {
+    display: inline;
     overflow: hidden;
-    font-family: 'Source Code Pro', monospace;  
-    font-size: 24px;
-    color: rgba(255,255,255,.70);
-    margin: 0 auto;
-    text-align: center;
-    max-width: 100%; /* Ensure the text doesn't overflow the container */
-    display: inline-block;
-    word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+    white-space: normal; /* Allow wrapping */
+    animation: typing-animation 4s steps(40, end) 1s 1 normal both;
 }
 
-/* Remove white-space: nowrap to allow text wrapping */
-h1, h2, p {
-    white-space: normal; /* Allow text to wrap to new lines */
-    width: 100%; /* Let the width of the element adjust to its content */
-}
-
-/* Animation for typing effect */
-h1, h2, p {
-    animation: animated-text 4s steps(29, end) 1s 1 normal both, 
-               animated-cursor 1000ms steps(29, end) infinite;
-}
-
-/* Text animation */
-@keyframes animated-text {
+/* Typing effect animation */
+@keyframes typing-animation {
     from { width: 0; }
-    to { width: 100%; }
+    to   { width: 100%; }
 }
 
 /* Cursor animation */
@@ -224,3 +223,49 @@ h1, h2, p {
     margin: 50px auto; /* Center the intro text */
     padding: 20px;
 }
+
+
+/* === New: single-caret typewriter (added) === */
+[data-typewriter]{
+  position: relative;
+  max-width: 60ch;
+  margin: 50px auto;
+  font-family: 'Source Code Pro', monospace;
+  color: rgba(255,255,255,.80);
+  line-height: 1.4;
+}
+
+.tw-text{
+  display:inline;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+.tw-caret{
+  display:inline-block;
+  width:2px;
+  height:1em;
+  vertical-align:-0.2em;
+  background:#00ff00;
+  box-shadow:0 0 6px #00ff00;
+  animation: tw-blink 1s steps(1) infinite;
+}
+
+.tw-caret.steady{ animation:none; }
+
+@keyframes tw-blink { 50% { opacity:0; } }
+
+/* === Disable old per-element typing/caret (override) === */
+h1, h2, p{
+  border-right: none !important;
+  animation: none !important;
+  width: auto !important;
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+/* === Page transition prep (non-breaking if unused) === */
+html, body { background:#17252A; }
+body { transition: opacity .25s ease; }
+html.page-exit body { opacity: 0; }
+a[data-fade]{ cursor: pointer; }
