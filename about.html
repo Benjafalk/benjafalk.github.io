@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>html,body{background:#17252A}</style>
-    <link rel="preload" as="style" href="styles.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benjamin Falk Portfolio - About</title>
@@ -29,11 +26,11 @@
     </header>
 
     <main>
-        <div class="intro" data-typewriter>
+        <div class="intro">
             <h1>About Me</h1>
-            <p>I am Benjamin Falk, a Computer Engineering student in my 7th semester at AAU. I'm passionate about technology and software development. I am currently working
-                 as a Student Ambassador, promoting the Computer Engineering degree at AAU. I am also working as a Student Study Advisor for Cybersecurity at the Department for Electronic Systems at AAU. Furthermore, 
-                I am working as a student worker, where I help the IT and Administration section of the University, with various tasks and problems. 
+            <p>I am Benjamin Falk, a Computer Engineering student in my 7th semester at AAU. I'm passionate about technology and software development. 
+                I am currently working as a Student Ambassador, promoting the Computer Engineering degree at AAU. I am also working as a Student Study Advisor for Cybersecurity at the Department for Electronic Systems at AAU. 
+                Furthermore, I am working as a student worker, where I help the IT and Administration section of the University, with various tasks and problems. 
             </p>
         </div>
     </main>
@@ -68,31 +65,8 @@
             });
         });
     </script>
-
-    <script>
-        // smooth fade on navigation
-        window.addEventListener(beforeunload', function() {
-            document.documentElement.classList.add('page-exit';
-        });
-    
-        document.addEventListener('DOMContentLoaded',function(){
-            document.quesySelectorAll('nav a').forEach(a=>{
-                a.setAttribute('data-fade','');
-                a.addEventListener('click',function(e){
-                    e.preventDefault();
-                    const href = this.getAttribute('href');
-                    document.documentElement.classList.add('page-exit');
-                    setTimeout(()=>location.href=href,180);
-                });
-            });
-        });
-    </script>
-    
-
-    
     
     <script src="script.js"></script>
-    <script src="typewriter.js"></script>
 
 </body>
 </html>
