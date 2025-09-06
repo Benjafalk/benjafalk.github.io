@@ -1,4 +1,13 @@
 /* General styles (for desktop and larger screens) */
+html, body { background:#17252A; }
+@keyframes _safeFadeIn { from { opacity: 0 } to { opacity: 1 } }
+body {
+  opacity: 0;
+  animation: _safeFadeIn 500ms ease-out forwards;
+  overflow: auto;
+}
+
+
 body {
     margin: 0;
     padding: 0;
