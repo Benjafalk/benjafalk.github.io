@@ -11,14 +11,15 @@
     <div id="loader">
         <div class="spinner"></div>
     </div>
-    
+
     <canvas id="canvas"></canvas>
 
     <header>
+        <div class="logo">BF</div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a class="current" href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="work.html">Work</a></li>
             </ul>
@@ -27,11 +28,12 @@
 
     <main>
         <div class="intro">
-            <h1>About Me</h1>
-            <p>I am Benjamin Falk, a Computer Engineering student in my 7th semester at AAU. I'm passionate about technology and software development. 
-                I am currently working as a Student Ambassador, promoting the Computer Engineering degree at AAU. I am also working as a Student Study Advisor for Cybersecurity at the Department for Electronic Systems at AAU. 
-                Furthermore, I am working as a student worker, where I help the IT and Administration section of the University, with various tasks and problems. 
-            </p>
+            <div class="typewriter"><div class="reveal">
+                <h1>About Me</h1>
+                <p>I am Benjamin Falk, a Computer Engineering student with a focus on AI, Vision & Sound at AAU. I'm passionate about technology and software development. 
+                I am currently working as a Student Ambassador, and I’m also working as a Student Study Advisor for Cybersecurity at the
+                university. I enjoy solving real-world problems and building useful tools and services.</p>
+            </div></div>
         </div>
     </main>
 
@@ -41,32 +43,20 @@
         <a href="https://www.instagram.com/benjafalk/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://github.com/Benjafalk" target="_blank"><i class="fab fa-github"></i></a>
     </footer>
+
     <script>
-        // Function to remove the loader after the page loads
-        window.addEventListener('load', function() {
-            // Add the 'loaded' class to the body when the page is fully loaded
-            document.body.classList.add('loaded');
-        });
-    
-        // Function to show the loader before navigating to another page
-        document.querySelectorAll('nav ul li a').forEach(link => {
+        document.querySelectorAll('a[href]').forEach(function(link) {
+            if (link.classList.contains('hidden-link')) return;
             link.addEventListener('click', function(e) {
-                e.preventDefault();  // Prevent default navigation
-    
-                const href = this.getAttribute('href');  // Get the link's href
-    
-                // Show the loader
+                const href = link.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('http')) return;
+                e.preventDefault();
                 document.body.classList.remove('loaded');
-    
-                // Simulate a delay before navigating to the next page
-                setTimeout(function() {
-                    window.location.href = href;
-                }, 200);  // Adjust the delay as necessary (in milliseconds)
+                setTimeout(function() { window.location.href = href; }, 200);
             });
         });
     </script>
-    
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
 </body>
 </html>
