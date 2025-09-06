@@ -25,9 +25,133 @@ canvas {
 }
 
 header {
-    background-color: rgba(23, 37, 42, 0.7);
-    padding: 15px;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* keep your background, padding from earlier rule */
+    /* background-color: rgba(23, 37, 42, 0.7); */
+    /* padding: 15px; */
+    /* text-align: right;  <-- no longer needed with flex, but leaving it won't break things */
+}
+
+/* ===== Fancy BF logo ===== */
+.logo {
+    position: relative;
+    display: inline-block;
+    margin-right: auto;             /* push nav to the right */
+    text-decoration: none;          /* remove underline from <a> */
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 0.06em;
+
+    /* Animated gradient text */
+    background: linear-gradient(120deg, #00ffa3, #00ffd0, #66ffcc, #00ffa3);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    /* Subtle idle motion */
+    animation: logo-breathe 3.5s ease-in-out infinite;
+
+    /* Crisp glow outline via text-shadow */
+    text-shadow:
+        0 0 4px rgba(0,255,170,0.25),
+        0 0 10px rgba(0,255,170,0.18);
+
+    /* Smoother transforms on hover/active */
+    transition: transform .25s ease, filter .25s ease, text-shadow .25s ease;
+    will-change: transform, filter, text-shadow;
+}
+
+/* Sparkle/shine sweep (appears on hover) */
+.logo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(75deg,
+                transparent 0%,
+                rgba(255,255,255,0.35) 45%,
+                rgba(255,255,255,0.75) 50%,
+                rgba(255,255,255,0.35) 55%,
+                transparent 100%);
+    transform: translateX(-120%) skewX(-18deg);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Tiny sparkle particles around the logo (subtle) */
+.logo::before {
+    content: "";
+    position: absolute;
+    left: -14px; top: 50%;
+    width: 8px; height: 8px;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0) 70%),
+      radial-gradient(circle at 20% 20%, rgba(0,255,170,0.9), rgba(0,255,170,0) 70%),
+      radial-gradient(circle at 80% 70%, rgba(0,255,208,0.8), rgba(0,255,208,0) 70%);
+    filter: blur(0.2px);
+    border-radius: 50%;
+    transform: translateY(-50%) scale(0.9);
+    opacity: 0.0;                   /* very subtle by default */
+    animation: spark-float 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Hover effects: tilt + shine sweep + brighter glow */
+.logo:hover {
+    transform: translateY(-1px) scale(1.03) rotateX(6deg) rotateY(-6deg);
+    filter: drop-shadow(0 0 6px rgba(0,255,170,0.25));
+    text-shadow:
+        0 0 6px rgba(0,255,170,0.35),
+        0 0 16px rgba(0,255,170,0.25);
+}
+
+.logo:hover::after {
+    opacity: 1;
+    animation: logo-shine 750ms ease forwards;
+}
+
+.logo:hover::before {
+    opacity: 0.35;                  /* make sparkles visible on hover */
+}
+
+/* Click feedback (press effect) */
+.logo:active {
+    transform: translateY(0px) scale(0.98) rotateX(0) rotateY(0);
+}
+
+/* Animated gradient motion for the text */
+@keyframes logo-breathe {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Shine sweep across the letters */
+@keyframes logo-shine {
+    0%   { transform: translateX(-120%) skewX(-18deg); opacity: 0; }
+    20%  { opacity: 1; }
+    80%  { opacity: 1; }
+    100% { transform: translateX(120%) skewX(-18deg); opacity: 0; }
+}
+
+/* Gentle sparkle float */
+@keyframes spark-float {
+    0%,100% { transform: translateY(-50%) scale(0.9); }
+    50%     { transform: translateY(-54%) scale(1.05); }
+}
+
+/* Make sure links inside header inherit the right color */
+header .logo,
+header .logo:visited {
+    color: transparent; /* gradient text controls color */
+}
+
+/* On very small screens, scale the logo slightly */
+@media (max-width: 480px) {
+    .logo { font-size: 28px; }
 }
 
 nav ul {
