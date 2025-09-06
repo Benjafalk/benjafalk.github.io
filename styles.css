@@ -278,3 +278,71 @@ html, body { background:#17252A; }
 body { transition: opacity .25s ease; }
 html.page-exit body { opacity: 0; }
 a[data-fade]{ cursor: pointer; }
+
+
+/* 1) Make page visible again */
+html, body { background:#17252A; }
+body {
+  opacity: 1 !important;          /* override any 0 opacity */
+  animation: none !important;      /* cancel broken fade */
+  overflow: auto !important;
+}
+
+/* 2) Keep content above the WebGL canvas */
+main { position: relative; z-index: 2; }
+.canvas-container, #webgl-canvas { z-index: 0; pointer-events: none; }
+
+/* 3) Ensure header/nav links are visible and clickable */
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 3; }
+.header a { color: #ffffff !important; }
+.header a:hover { color: #00ff00 !important; }
+
+/* 4) Restore footer to bottom-center with full width */
+footer{
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto !important;          /* override earlier width: 10 */
+  background: transparent;
+  padding: 0;
+  text-align: center;
+  z-index: 3;
+}
+
+/* Make the icon row centered and spaced even if markup differs */
+footer .contact-icons,
+footer .social,
+footer ul{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Base link/icon sizing */
+footer a{ font-size: 24px; text-decoration: none; }
+
+/* 5) Brand colors for social icons (always visible) */
+footer i.fa-linkedin{  color: #0077b5; }  /* LinkedIn */
+footer i.fa-facebook{  color: #3b5998; }  /* Facebook */
+footer i.fa-instagram{ color: #e4405f; }  /* Instagram */
+footer i.fa-github{    color: #333333; }  /* GitHub */
+
+/* Optional: slight brighten on hover */
+footer a:hover i{ filter: brightness(1.2); }
+
+/* 6) Neutralize legacy per-element typing so text shows */
+h1, h2, p{
+  border-right: none !important;
+  animation: none !important;
+  width: auto !important;
+  white-space: normal !important;
+  overflow: visible !important;
+}
+
+/* 7) Ensure text is readable over the background */
+h1, h2, p, .intro, .text-box { color: #ffffff !important; }
