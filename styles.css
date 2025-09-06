@@ -237,7 +237,16 @@ h1, h2, p {
     to { border-right-color: transparent; }
 }
 */
+.hidden-link {
+    color: inherit;            /* Take the text color of the parent (white/gray) */
+    text-decoration: none;     /* Remove underline */
+    font-size: inherit;        /* Keep same font size as parent */
+}
 
+.hidden-link:hover {
+    color: #2B7A78;            /* Optional hover color */
+    text-decoration: underline; /* Or leave none, if you want completely plain */
+}
 /* Ensure the parent container has enough width */
 .intro {
     width: 60%; /* Adjust this as needed for your layout */
