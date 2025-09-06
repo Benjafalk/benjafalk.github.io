@@ -91,6 +91,25 @@
     </script>
     
 
+    <script>
+        // smooth fade on navigation
+        window.addEventListener(beforeunload', function() {
+            document.documentElement.classList.add('page-exit';
+        });
+    
+        document.addEventListener('DOMContentLoaded',function(){
+            document.quesySelectorAll('nav a').forEach(a=>{
+                a.setAttribute('data-fade','');
+                a.addEventListener('click',function(e){
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    document.documentElement.classList.add('page-exit');
+                    setTimeout(()=>location.href=href,180);
+                });
+            });
+        });
+    </script>
+    
     <script src="script.js"></script>
     <script src="typewriter.js"></script>
 
