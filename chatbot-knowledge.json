@@ -1,0 +1,161 @@
+{
+  "settings": {
+    "fallback": "i am not sure. ask another question",
+    "scopeMessage": "i only answer questions about me based on this website."
+  },
+  "entries": [
+    {
+      "id": "relationship_status",
+      "category": "personal",
+      "priority": 100,
+      "keywords": ["single", "girlfriend", "relationship", "dating", "partner"],
+      "aliases": ["are you single", "do you have a girlfriend", "girlfriend", "relationship status"],
+      "answer": "i am not single, i love my girlfriend <3",
+      "source": "hardcoded override"
+    },
+    {
+      "id": "sexuality",
+      "category": "personal",
+      "priority": 100,
+      "keywords": ["gay", "homosexual", "homo", "men"],
+      "aliases": ["are you gay", "are you homosexual", "is benjamin gay", "is benjamin homosexual", "is are you homo", "do you like men"],
+      "answer": "NO",
+      "source": "hardcoded override"
+    },
+    {
+      "id": "name",
+      "category": "profile",
+      "priority": 96,
+      "keywords": ["my name", "your name", "called"],
+      "aliases": ["what is your name", "who are you", "what are you called", "name?"],
+      "answer": "my name is Benjamin Falk.",
+      "source": "website"
+    },
+    {
+      "id": "open_for_work",
+      "category": "work",
+      "priority": 98,
+      "keywords": ["open for work", "available", "job hunting", "looking for work", "hire"],
+      "aliases": ["is benjamin open for work", "are you open for work", "are you looking for work", "can i hire you"],
+      "answer": "no, he already has 4 jobs :)",
+      "source": "hardcoded override"
+    },
+    {
+      "id": "origin",
+      "category": "profile",
+      "priority": 88,
+      "keywords": ["from", "where from", "hometown", "live", "aalborg"],
+      "aliases": ["where are you from", "where do you live", "where is benjamin from", "from?"],
+      "answer": "i am based in Aalborg.",
+      "source": "profile answer"
+    },
+    {
+      "id": "football_team",
+      "category": "personal",
+      "priority": 95,
+      "keywords": ["football team", "support", "fan", "favorite team", "favourite team"],
+      "aliases": ["what football team do you support", "who do you support", "who are you fan of", "favorite football team", "what team are you a fan of"],
+      "answer": "i support AaB and FC Barcelona",
+      "source": "hardcoded override"
+    },
+    {
+      "id": "play_football",
+      "category": "personal",
+      "priority": 97,
+      "keywords": ["play football", "playing football"],
+      "aliases": ["do you play football", "are you playing football", "where do you play football"],
+      "answer": "Nordens Paris here in Aalborg",
+      "source": "hardcoded override"
+    },
+    {
+      "id": "favorite_food",
+      "category": "personal",
+      "priority": 95,
+      "keywords": ["food", "favorite food", "favourite food", "eat", "cheeseburger", "fries", "tarteletter"],
+      "aliases": ["what is your favorite food", "favourite food", "what food do you like", "best food", "what do you love to eat"],
+      "answer": "i love a classic cheeseburger with fries, but tarteletter are also goated",
+      "source": "hardcoded override"
+    },
+    {
+      "id": "family_general",
+      "category": "family",
+      "priority": 90,
+      "keywords": ["family", "parents", "mom", "mother", "dad", "father", "brothers", "siblings", "twin"],
+      "aliases": ["tell me about your family", "do you have siblings", "do you have brothers", "do you have a twin", "who is in your family"],
+      "answer": "i have a mom, a dad, two big brothers, and a twin.",
+      "source": "hardcoded profile fact"
+    },
+    {
+      "id": "siblings",
+      "category": "family",
+      "priority": 92,
+      "keywords": ["siblings", "brothers", "brother", "twin"],
+      "aliases": ["do you have siblings", "how many siblings do you have", "do you have brothers", "do you have a twin"],
+      "answer": "yes. i have two big brothers and a twin.",
+      "source": "hardcoded profile fact"
+    },
+    {
+      "id": "dog",
+      "category": "family",
+      "priority": 92,
+      "keywords": ["dog", "dogs", "pet", "pets", "sofus"],
+      "aliases": ["do you have a dog", "do you have pets", "what is your dog called", "what is your dogs name", "what is your dog's name", "dog name", "dogs name"],
+      "answer": "yes, i have a dog named Sofus.",
+      "source": "hardcoded profile fact"
+    },
+    {
+      "id": "age",
+      "category": "profile",
+      "priority": 78,
+      "keywords": ["age", "old", "years old"],
+      "aliases": ["how old are you", "what is your age", "age?"],
+      "answer": "i am 23 years old.",
+      "source": "website"
+    },
+    {
+      "id": "study",
+      "category": "education",
+      "priority": 82,
+      "keywords": ["study", "studying", "education", "semester", "master", "aau", "computer engineering", "ai vision sound"],
+      "aliases": ["what are you studying", "where do you study", "what semester are you on"],
+      "answer": "i am an 8th semester master's student in computer engineering at AAU, specializing in AI, Vision & Sound.",
+      "source": "website"
+    },
+    {
+      "id": "bachelor",
+      "category": "education",
+      "priority": 98,
+      "keywords": ["bachelor", "bachelors", "bachelor in", "have a bachelor", "computerteknologi", "computer engineering"],
+      "aliases": ["do you have a bachelor", "what do you have a bachelor in", "what do you have your bachelors in", "what is your bachelor in", "what did you study for your bachelor"],
+      "answer": "my bachelor is in computer engineering / computerteknologi at AAU.",
+      "source": "website"
+    },
+    {
+      "id": "work_current",
+      "category": "work",
+      "priority": 84,
+      "keywords": ["job", "work", "ambolt", "student worker", "software developer", "electronic systems"],
+      "aliases": ["where do you work", "what is your job", "do you have a job", "what do you do for work"],
+      "answer": "i work at Ambolt AI as a student software developer, and i also have 3 different jobs at the Department of Electronic Systems at AAU.",
+      "source": "website"
+    },
+    {
+      "id": "projects",
+      "category": "projects",
+      "priority": 70,
+      "keywords": ["projects", "work", "portfolio", "made", "built", "semester project", "side project"],
+      "aliases": ["what projects have you made", "show me your projects", "what have you built"],
+      "answer": "i have worked on semester projects across RF jammer localization, grid control, IoT traffic security, water network security, smart grid monitoring, computer vision for anti-fouling assessment, and LEGO print inspection. i also have side projects like this website and a Minecraft biome classifier.",
+      "source": "website"
+    },
+    {
+      "id": "contact",
+      "category": "contact",
+      "priority": 65,
+      "keywords": ["contact", "email", "mail", "phone", "reach"],
+      "aliases": ["how can i contact you", "what is your email", "contact information"],
+      "answer": "you can contact me at Benjamin@ambolt.io, bf@es.aau.dk, bfalk22@student.aau.dk, or Benjafalk@hotmail.com.",
+      "source": "website"
+    }
+  ]
+}

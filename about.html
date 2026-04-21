@@ -3,65 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Falk Portfolio - About</title>
+    <title>Benjamin Falk | About</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
+    <canvas id="canvas" aria-hidden="true"></canvas>
+
     <div id="loader">
         <div class="spinner"></div>
     </div>
 
-    <canvas id="canvas"></canvas>
-
-    <header>
-    <a class="logo hidden-link"
-       href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="BF">
-        BF
-    </a>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="work.html">Work</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
+        <a class="logo hidden-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" aria-label="BF" data-text="BF">BF</a>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sound-examples.html">Sound Examples</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="intro">
-            <div class="typewriter"><div class="reveal">
-                <h1>About Me</h1>
-                <p>I am Benjamin Falk, a Computer Engineering student with a focus on AI, Vision & Sound at AAU. I'm passionate about technology and software development. 
-                I am currently working as a Student Ambassador, and I’m also working as a Student Study Advisor for Cybersecurity at the
-                university. I enjoy solving real-world problems and building useful tools and services.</p>
-            </div></div>
-        </div>
+        <section class="page-title reveal-on-scroll">
+            <p class="eyebrow">About</p>
+            <h1>Engineering useful AI from complex data</h1>
+            <p class="lead">I am Benjamin Falk, an 8th semester Computer Engineering master's student specializing in AI, Vision & Sound at Aalborg University.</p>
+        </section>
+
+        <section class="page-section split-section">
+            <div class="glass-panel reveal-on-scroll">
+                <h2>Profile</h2>
+                <p>I am interested in technology that works outside demos: robust model behavior, clear software structure, and interfaces that help people understand what a system is doing. I specialize in AI, Machine Learning and Computer Vision.</p>
+                <p>I currently work at Ambolt AI as a student software developer, and I have 3 different jobs at the Department of Electronic Systems at AAU.</p>
+                <a class="ambolt-profile-link" href="https://ambolt.io/" target="_blank" rel="noopener noreferrer" aria-label="Ambolt AI website">
+                    <img src="ambolt.png" alt="Ambolt AI">
+                    <span>Visit Ambolt AI</span>
+                </a>
+                <a class="ambolt-profile-link" href="https://www.es.aau.dk/" target="_blank" rel="noopener noreferrer" aria-label="Department of Electronic Systems website">
+                    <img src="institut_for_elektroniske_systemer_aau_logo.jpg" alt="Institute for Electronic Systems, AAU">
+                    <span>Visit Electronic Systems</span>
+                </a>
+            </div>
+
+            <div class="timeline reveal-on-scroll" style="--delay: 120ms">
+                <article>
+                    <span>Student job</span>
+                    <h3>Student Worker, Ambolt AI</h3>
+                    <p>Student software developer working with applied AI in a professional setting.</p>
+                </article>
+                <article>
+                    <span>Student job</span>
+                    <h3>Student Ambassador for Computer Engineering</h3>
+                    <p>Representing Computer Engineering and supporting outreach activities.</p>
+                </article>
+                <article>
+                    <span>Student job</span>
+                    <h3>Student Ambassador for Cybersecurity</h3>
+                    <p>Representing Cybersecurity and helping with study-related questions and guidance.</p>
+                </article>
+                <article>
+                    <span>Student job</span>
+                    <h3>Student Worker, AAU</h3>
+                    <p>Working in Administration & IT at the Institute of Electronic Systems.</p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <a href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/benjamin.falk.98" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/benjafalk/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/Benjafalk" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/benjamin.falk.98" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/benjafalk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Benjafalk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </footer>
 
-    <script>
-        document.querySelectorAll('a[href]').forEach(function(link) {
-            if (link.classList.contains('hidden-link')) return;
-            link.addEventListener('click', function(e) {
-                const href = link.getAttribute('href');
-                if (!href || href.startsWith('#') || href.startsWith('http')) return;
-                e.preventDefault();
-                document.body.classList.remove('loaded');
-                setTimeout(function() { window.location.href = href; }, 200);
-            });
-        });
-    </script>
-
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
 </body>
 </html>

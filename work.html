@@ -3,74 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Falk Portfolio - Work</title>
+    <title>Benjamin Falk | Work</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
+    <canvas id="canvas" aria-hidden="true"></canvas>
+
     <div id="loader">
         <div class="spinner"></div>
     </div>
 
-    <canvas id="canvas"></canvas>
-
-    <header>
-    <a class="logo hidden-link"
-       href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="BF">
-        BF
-    </a>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="work.html">Work</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
+        <a class="logo hidden-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" aria-label="BF" data-text="BF">BF</a>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sound-examples.html">Sound Examples</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="intro">
-            <h1>My Work</h1>
-            <p>Here is an overview of my projects and work:</p>
-            <p><a href="https://github.com/Tovgaard/P1-UAV" 
-                class="hidden-link">1. UAV-based Radio Frequency Jammer Locator</a></p>
-            <p><a href="
-                https://publuu.com/flip-book/664564/1480448"class="hidden-link">2. Local Power Distribution Grid Controller</a></p> 
-            <p><a href="https://github.com/ReturnOfTheLast/p3_iot_traffic_controller"
-                class="hidden-link">3. Detection of suspicious IP traffic: Preventing the outgoing data of IoT devices to suspicious third parties through the use of an adaptive traffic controller</a></p>
-            <p><a href="https://kbdk-aub.primo.exlibrisgroup.com/permalink/45KBDK_AUB/1pf1c45/alma9921780702305762"
-                class="hidden-link">4. Securing Water Distribution Networks</a></p>
-            <p><a href="https://github.com/Ramlov/P5"
-                class="hidden-link">5. Intelligent Monitoring System For Adaptive Measuremenet Device Access Supporting Smart Grid Real-Time Operations</a></p>
-            <p><a href="https://drive.google.com/file/d/1s0PxLl_94UBNQQJ1TuUv-mNoRLxU30C7/view?usp=sharing"
-                class="hidden-link">6. Computer Vision for Anti-Fouling Assessment</a></p>
-            <p><a href="https://github.com/Benjafalk/benjafalk.github.io" class="hidden-link">This website</a></p>
-        </div>
+        <section class="page-title reveal-on-scroll">
+            <p class="eyebrow">Selected Work</p>
+            <h1>Projects across AI, security, energy, and vision</h1>
+            <p class="lead">A focused overview of academic and technical projects I have worked on.</p>
+        </section>
+
+        <section class="work-list page-section">
+            <div class="work-category reveal-on-scroll">
+                <span>Semester Projects</span>
+            </div>
+            <a class="work-item reveal-on-scroll" href="https://github.com/Tovgaard/P1-UAV" target="_blank" rel="noopener noreferrer">
+                <span>01</span>
+                <div>
+                    <h2>UAV-based Radio Frequency Jammer Locator</h2>
+                    <p>Drone-based localization system for identifying radio frequency interference.</p>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a class="work-item reveal-on-scroll" href="https://drive.google.com/file/d/1JX3zSVSBk9-hxAso87DxS3-X6WCmh9Sd/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <span>02</span>
+                <div>
+                    <h2>Local Power Distribution Grid Controller</h2>
+                    <p>Controller work for local power distribution and grid behavior.</p>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a class="work-item reveal-on-scroll" href="https://github.com/ReturnOfTheLast/p3_iot_traffic_controller" target="_blank" rel="noopener noreferrer">
+                <span>03</span>
+                <div>
+                    <h2>Detection of Suspicious IP Traffic</h2>
+                    <p>Adaptive traffic control for reducing outgoing suspicious IoT traffic.</p>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a class="work-item reveal-on-scroll" href="https://drive.google.com/file/d/1M-RdwOZ2dXBqhgREVgTOY3ppyS0z_VTp/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <span>04</span>
+                <div>
+                    <h2>Securing Water Distribution Networks</h2>
+                    <p>Security-oriented analysis and system design for critical water infrastructure.</p>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a class="work-item reveal-on-scroll" href="https://github.com/Ramlov/P5" target="_blank" rel="noopener noreferrer">
+                <span>05</span>
+                <div>
+                    <h2>Intelligent monitoring system for smart grid real-time operations</h2>
+                    <p>Adaptive measurement device access supporting smart grid real-time operations.</p>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <article class="work-item no-link reveal-on-scroll">
+                <span>06</span>
+                <div>
+                    <h2>Computer Vision for Anti-Fouling Assessment</h2>
+                    <p>Computer vision project for assessing anti-fouling performance. NDA signed with RISE.</p>
+                </div>
+                <i class="fas fa-lock"></i>
+            </article>
+
+            <article class="work-item no-link reveal-on-scroll">
+                <span>07</span>
+                <div>
+                    <h2>Leveraging Synthetic Data For Scalable Anomaly Detection in LEGO Print Inspection</h2>
+                    <p>7th semester project work. NDA signed with LEGO.</p>
+                </div>
+                <i class="fas fa-lock"></i>
+            </article>
+
+            <div class="work-category reveal-on-scroll">
+                <span>Side Projects</span>
+            </div>
+            <a class="work-item reveal-on-scroll" href="https://github.com/Benjafalk/benjafalk.github.io" target="_blank" rel="noopener noreferrer">
+                <span>08</span>
+                <div>
+                    <h2>This Website</h2>
+                    <p>Personal portfolio and experiment space for visual web interactions.</p>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a class="work-item reveal-on-scroll" href="https://github.com/Benjafalk/Deep-Learning-Mini-Project" target="_blank" rel="noopener noreferrer">
+                <span>09</span>
+                <div>
+                    <h2>Minecraft Biome Classifier</h2>
+                    <p>Deep Learning course mini-project for classifying Minecraft biomes.</p>
+                </div>
+                <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+        </section>
     </main>
 
     <footer>
-        <a href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/benjamin.falk.98" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/benjafalk/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/Benjafalk" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/benjamin.falk.98" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/benjafalk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Benjafalk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </footer>
 
-    <script>
-        document.querySelectorAll('a[href]').forEach(function(link) {
-            if (link.classList.contains('hidden-link')) return;
-            link.addEventListener('click', function(e) {
-                const href = link.getAttribute('href');
-                if (!href || href.startsWith('#') || href.startsWith('http')) return;
-                e.preventDefault();
-                document.body.classList.remove('loaded');
-                setTimeout(function() { window.location.href = href; }, 200);
-            });
-        });
-    </script>
-
     <script src="script.js"></script>
+    <script src="chatbot.js"></script>
 </body>
 </html>

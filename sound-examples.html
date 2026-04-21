@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Falk | Sound Examples</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <canvas id="canvas" aria-hidden="true"></canvas>
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="site-header">
+        <a class="logo hidden-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" aria-label="BF" data-text="BF">BF</a>
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="sound-examples.html">Sound Examples</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title reveal-on-scroll">
+            <p class="eyebrow">Dataset Audio</p>
+            <h1>Sound Examples</h1>
+            <p class="lead">Here are some examples of our dataset in 8th semester</p>
+        </section>
+
+        <section class="page-section audio-wave-player reveal-on-scroll" aria-label="Animated audio waveform visualization">
+            <canvas id="dataset-wave"></canvas>
+        </section>
+
+        <section class="sound-list page-section">
+            <details class="sound-group reveal-on-scroll">
+                <summary>Fuck</summary>
+                <div class="sound-files">
+                    <article><span>Normal</span><audio controls preload="none" src="audio/fuck_.mp3"></audio></article>
+                    <article><span>Pitch</span><audio controls preload="none" src="audio/fuck_pitch.mp3"></audio></article>
+                    <article><span>Gain</span><audio controls preload="none" src="audio/fuck_gain.mp3"></audio></article>
+                    <article><span>Reverb</span><audio controls preload="none" src="audio/fuck_reverb_.mp3"></audio></article>
+                    <article><span>Sentence</span><audio controls preload="none" src="audio/for_fucks_sake.mp3"></audio></article>
+                </div>
+            </details>
+
+            <details class="sound-group reveal-on-scroll">
+                <summary>Bitch</summary>
+                <div class="sound-files">
+                    <article><span>Normal</span><audio controls preload="none" src="audio/bitch-normal.mp3"></audio></article>
+                    <article><span>Pitch</span><audio controls preload="none" src="audio/bitch-pitch.mp3"></audio></article>
+                    <article><span>Gain</span><audio controls preload="none" src="audio/bitch-gain.mp3"></audio></article>
+                    <article><span>Reverb</span><audio controls preload="none" src="audio/bitch-reverb.mp3"></audio></article>
+                    <article><span>Sentence</span><audio controls preload="none" src="audio/bitch-sentence.mp3"></audio></article>
+                </div>
+            </details>
+
+            <details class="sound-group reveal-on-scroll">
+                <summary>Ass</summary>
+                <div class="sound-files">
+                    <article><span>Normal</span><audio controls preload="none" src="audio/ass-normal.mp3"></audio></article>
+                    <article><span>Pitch</span><audio controls preload="none" src="audio/ass-pitch.mp3"></audio></article>
+                    <article><span>Gain</span><audio controls preload="none" src="audio/ass-gain.mp3"></audio></article>
+                    <article><span>Reverb</span><audio controls preload="none" src="audio/ass-reverb.mp3"></audio></article>
+                    <article><span>Sentence</span><audio controls preload="none" src="audio/ass-sentence.mp3"></audio></article>
+                </div>
+            </details>
+
+            <details class="sound-group reveal-on-scroll">
+                <summary>Shit</summary>
+                <div class="sound-files">
+                    <article><span>Normal</span><audio controls preload="none" src="audio/shit-normal.mp3"></audio></article>
+                    <article><span>Pitch</span><audio controls preload="none" src="audio/shit-pitch.mp3"></audio></article>
+                    <article><span>Gain</span><audio controls preload="none" src="audio/shit-gain.mp3"></audio></article>
+                    <article><span>Reverb</span><audio controls preload="none" src="audio/shit-reverb.mp3"></audio></article>
+                    <article><span>Sentence</span><audio controls preload="none" src="audio/shit-sentence.mp3"></audio></article>
+                </div>
+            </details>
+
+            <details class="sound-group reveal-on-scroll">
+                <summary>Damn</summary>
+                <div class="sound-files">
+                    <article><span>Normal</span><audio controls preload="none" src="audio/damn-normal.mp3"></audio></article>
+                    <article><span>Pitch</span><audio controls preload="none" src="audio/damn-pitch.mp3"></audio></article>
+                    <article><span>Gain</span><audio controls preload="none" src="audio/damn-gain.mp3"></audio></article>
+                    <article><span>Reverb</span><audio controls preload="none" src="audio/damn-reverb.mp3"></audio></article>
+                    <article><span>Sentence</span><audio controls preload="none" src="audio/damn-sentence.mp3"></audio></article>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/benjamin.falk.98" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/benjafalk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Benjafalk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
