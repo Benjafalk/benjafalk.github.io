@@ -1,87 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Falk | About</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="About Benjamin Falk: software engineer, AI builder, and Computer Engineering master's student at Aalborg University."><title>About | Benjamin Falk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <canvas id="canvas" aria-hidden="true"></canvas>
-
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
-
-    <header class="site-header">
-        <a class="logo hidden-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" aria-label="BF" data-text="BF">BF</a>
-        <nav aria-label="Primary navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sound-examples.html">Sound Examples</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="page-title reveal-on-scroll">
-            <p class="eyebrow">About</p>
-            <h1>Engineering useful AI from complex data</h1>
-            <p class="lead">I am Benjamin Falk, an 8th semester Computer Engineering master's student specializing in AI, Vision & Sound at Aalborg University.</p>
+<body data-page="about">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><a class="logo" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" aria-label="Benjamin Falk logo — opens a surprise"><span class="logo-box" aria-hidden="true"><span class="logo-front">BF</span><span class="logo-back">?</span><span class="logo-dot"></span></span><span class="logo-name" aria-hidden="true"><span>Benjamin</span><span>Falk</span></span></a><nav aria-label="Primary navigation"><a href="index.html">Home</a><a class="active" href="about.html">About</a><a href="work.html">Work</a><a href="contact.html">Contact</a></nav></header>
+    <main id="main">
+        <section class="page-intro shell"><p class="status-line"><span></span> PROFILE / UPDATED OCT 2026</p><h1>I build from the data layer to the <em>interface.</em></h1><p>I’m a 9th semester Computer Engineering master’s student at Aalborg University, specializing in AI, Vision and Sound, with a bias toward technology that becomes genuinely useful.</p></section>
+        <section class="profile-layout shell">
+            <div class="profile-story reveal"><h2>Engineering, end to end.</h2><p>At Ambolt AI, I work with AI, data, and software solutions for real business challenges. My experience spans software engineering, data engineering, API integrations, full-stack development, and Large Language Models.</p><p>That means I’m comfortable moving through the full process: understanding the data, building backend systems, connecting services, and shaping the application people actually use.</p><p>My academic foundation also covers machine learning, deep learning, computer vision, signal and sound processing, cybersecurity, distributed systems, cloud technologies, and embedded systems.</p></div>
+            <aside class="profile-facts reveal" aria-label="Profile facts"><div><span>BASE</span><strong>Aalborg, Denmark</strong></div><div><span>STUDY</span><strong>MSc Computer Engineering</strong></div><div><span>SEMESTER</span><strong>9 / 10</strong></div><div><span>FOCUS</span><strong>AI, Vision & Sound</strong></div><div><span>BACHELOR</span><strong>Computer Engineering, AAU</strong></div></aside>
         </section>
-
-        <section class="page-section split-section">
-            <div class="glass-panel reveal-on-scroll">
-                <h2>Profile</h2>
-                <p>I am interested in technology that works outside demos: robust model behavior, clear software structure, and interfaces that help people understand what a system is doing. I specialize in AI, Machine Learning and Computer Vision.</p>
-                <p>I currently work at Ambolt AI as a student software developer, and I have 3 different jobs at the Department of Electronic Systems at AAU.</p>
-                <a class="ambolt-profile-link" href="https://ambolt.io/" target="_blank" rel="noopener noreferrer" aria-label="Ambolt AI website">
-                    <img src="ambolt.png" alt="Ambolt AI">
-                    <span>Visit Ambolt AI</span>
-                </a>
-                <a class="ambolt-profile-link" href="https://www.es.aau.dk/" target="_blank" rel="noopener noreferrer" aria-label="Department of Electronic Systems website">
-                    <img src="institut_for_elektroniske_systemer_aau_logo.jpg" alt="Institute for Electronic Systems, AAU">
-                    <span>Visit Electronic Systems</span>
-                </a>
-            </div>
-
-            <div class="timeline reveal-on-scroll" style="--delay: 120ms">
-                <article>
-                    <span>Student job</span>
-                    <h3>Student Worker, Ambolt AI</h3>
-                    <p>Student software developer working with applied AI in a professional setting.</p>
-                </article>
-                <article>
-                    <span>Student job</span>
-                    <h3>Student Ambassador for Computer Engineering</h3>
-                    <p>Representing Computer Engineering and supporting outreach activities.</p>
-                </article>
-                <article>
-                    <span>Student job</span>
-                    <h3>Student Ambassador for Cybersecurity</h3>
-                    <p>Representing Cybersecurity and helping with study-related questions and guidance.</p>
-                </article>
-                <article>
-                    <span>Student job</span>
-                    <h3>Student Worker, AAU</h3>
-                    <p>Working in Administration & IT at the Institute of Electronic Systems.</p>
-                </article>
+        <section class="experience shell" aria-labelledby="experience-title">
+            <div class="section-heading reveal"><h2 id="experience-title">Work & roles</h2></div>
+            <div class="experience-list">
+                <article class="experience-row reveal"><p class="role-meta">CURRENT · INTERNSHIP</p><div><h3>AI & Software Engineering · Ambolt AI</h3><p>Developing applied AI, data, API integration, full-stack, and LLM solutions in a professional setting.</p></div><a href="https://ambolt.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit Ambolt AI">↗</a></article>
+                <article class="experience-row reveal"><p class="role-meta">OWNER · PRODUCT</p><div><h3>Cybervagten</h3><p>Owning and developing a cybersecurity product, from the software to the public service.</p></div><a href="https://cybervagten.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Cybervagten">↗</a></article>
+                <article class="experience-row reveal"><p class="role-meta">FREELANCE · WEBSITE DEVELOPER</p><div><h3>Hørning Auto Teknik</h3><p>Designed and built the client website for a local auto workshop.</p></div><a href="https://xn--hrningautoteknik-lxb.dk/" target="_blank" rel="noopener noreferrer" aria-label="Visit Hørning Auto Teknik">↗</a></article>
+                <article class="experience-row reveal"><p class="role-meta">STUDENT AMBASSADOR</p><div><h3>Computer Engineering · AAU</h3><p>Representing Computer Engineering at schools, universities, and events, including teaching programming in C++.</p></div><a href="https://www.aau.dk/uddannelser/bachelor/computerteknologi" target="_blank" rel="noopener noreferrer" aria-label="Visit Computer Engineering at Aalborg University">↗</a></article>
+                <article class="experience-row reveal"><p class="role-meta">STUDENT AMBASSADOR</p><div><h3>Cybersecurity · AAU</h3><p>Representing Cybersecurity and communicating topics including web security and ethical hacking.</p></div><a href="https://www.aau.dk/uddannelser/kandidat/cyber-security" target="_blank" rel="noopener noreferrer" aria-label="Visit Cybersecurity at Aalborg University">↗</a></article>
+                <article class="experience-row reveal"><p class="role-meta">STUDENT WORKER</p><div><h3>Administration & IT · Electronic Systems, AAU</h3><p>Supporting the department across practical IT and administrative work.</p></div><a href="https://www.es.aau.dk/" target="_blank" rel="noopener noreferrer" aria-label="Visit Electronic Systems at AAU">↗</a></article>
             </div>
         </section>
+        <section class="closing shell reveal"><p>See the work behind the profile.</p><h2>Projects across AI,<br>security, and systems.</h2><a class="button button-signal" href="work.html">Open the project archive</a></section>
     </main>
-
-    <footer>
-        <a href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/benjamin.falk.98" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/benjafalk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/Benjafalk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="chatbot.js"></script>
+    <footer class="site-footer shell"><p>Benjamin Falk <span>© <span data-year></span></span></p><div class="social-links"><a class="social-link linkedin" href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a><a class="social-link facebook" href="https://www.facebook.com/benjamin.falk.98" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a><a class="social-link instagram" href="https://www.instagram.com/benjafalk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a class="social-link github" href="https://github.com/Benjafalk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></div></footer><script src="script.js"></script>
 </body>
 </html>

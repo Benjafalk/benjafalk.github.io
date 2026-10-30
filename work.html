@@ -1,137 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin Falk | Work</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Selected software, AI, cybersecurity, client, and academic projects by Benjamin Falk."><title>Work | Benjamin Falk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <canvas id="canvas" aria-hidden="true"></canvas>
+<body data-page="work">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><a class="logo" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" aria-label="Benjamin Falk logo — opens a surprise"><span class="logo-box" aria-hidden="true"><span class="logo-front">BF</span><span class="logo-back">?</span><span class="logo-dot"></span></span><span class="logo-name" aria-hidden="true"><span>Benjamin</span><span>Falk</span></span></a><nav aria-label="Primary navigation"><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="work.html">Work</a><a href="contact.html">Contact</a></nav></header>
+    <main id="main">
+        <section class="page-intro shell"><p class="status-line"><span></span> PROJECT LEDGER / 2022—2026</p><h1>Nine semesters.<br>Plenty of <em>range.</em></h1><p>A complete record of my semester projects, personal builds, and professional work—with the original project links kept intact.</p></section>
 
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
-
-    <header class="site-header">
-        <a class="logo hidden-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" aria-label="BF" data-text="BF">BF</a>
-        <nav aria-label="Primary navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a class="active" href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="sound-examples.html">Sound Examples</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="page-title reveal-on-scroll">
-            <p class="eyebrow">Selected Work</p>
-            <h1>Projects across AI, security, energy, and vision</h1>
-            <p class="lead">A focused overview of academic and technical projects I have worked on.</p>
+        <section class="work-collection shell" aria-labelledby="semester-projects-title">
+            <header class="collection-header reveal"><div><h2 id="semester-projects-title">Semester Projects</h2><span>01—09</span></div><p>One substantial problem each semester, moving from embedded systems and infrastructure to security, vision, streaming AI, and big-data workflows.</p></header>
+            <div class="project-ledger">
+                <article class="ledger-row reveal"><span class="project-number">P1</span><div><h3>UAV-based Radio Frequency Jammer Locator</h3><p>Drone-based localization system for identifying radio frequency interference.</p></div><span class="project-domain">EMBEDDED / RF</span><a href="https://github.com/Tovgaard/P1-UAV" target="_blank" rel="noopener noreferrer">GitHub ↗</a></article>
+                <article class="ledger-row reveal"><span class="project-number">P2</span><div><h3>Local Power Distribution Grid Controller</h3><p>Controller work for local power distribution and grid behavior.</p></div><span class="project-domain">ENERGY SYSTEMS</span><a href="https://drive.google.com/file/d/1JX3zSVSBk9-hxAso87DxS3-X6WCmh9Sd/view?usp=sharing" target="_blank" rel="noopener noreferrer">Report ↗</a></article>
+                <article class="ledger-row reveal"><span class="project-number">P3</span><div><h3>Detection of Suspicious IP Traffic</h3><p>Adaptive traffic control for reducing outgoing suspicious IoT traffic.</p></div><span class="project-domain">IOT SECURITY</span><a href="https://github.com/ReturnOfTheLast/p3_iot_traffic_controller" target="_blank" rel="noopener noreferrer">GitHub ↗</a></article>
+                <article class="ledger-row reveal"><span class="project-number">P4</span><div><h3>Securing Water Distribution Networks</h3><p>Security-oriented analysis and system design for critical water infrastructure.</p></div><span class="project-domain">CYBERSECURITY</span><a href="https://drive.google.com/file/d/1M-RdwOZ2dXBqhgREVgTOY3ppyS0z_VTp/view?usp=sharing" target="_blank" rel="noopener noreferrer">Report ↗</a></article>
+                <article class="ledger-row reveal"><span class="project-number">P5</span><div><h3>Intelligent Monitoring for Smart Grid Real-Time Operations</h3><p>Adaptive measurement device access supporting real-time smart-grid operations.</p></div><span class="project-domain">SMART GRID</span><a href="https://github.com/Ramlov/P5" target="_blank" rel="noopener noreferrer">GitHub ↗</a></article>
+                <article class="ledger-row ledger-row-locked reveal"><span class="project-number">P6</span><div><h3>Computer Vision for Anti-Fouling Assessment</h3><p>Computer vision for assessing anti-fouling performance. NDA signed with RISE.</p></div><span class="project-domain">COMPUTER VISION</span><span class="project-status">NDA</span></article>
+                <article class="ledger-row ledger-row-locked reveal"><span class="project-number">P7</span><div><h3>Synthetic Data for Scalable Anomaly Detection in LEGO Print Inspection</h3><p>Industrial anomaly detection using synthetic training data. NDA signed with LEGO.</p></div><span class="project-domain">COMPUTER VISION / SYNTHETIC DATA</span><span class="project-status">NDA</span></article>
+                <article class="ledger-row reveal"><span class="project-number">P8</span><div><h3>Automatic Censoring of Profanities During Streaming of Media</h3><p>Automatic, real-time profanity censoring for streamed media.</p></div><span class="project-domain">AI / SOUND</span><a href="https://github.com/magnusknudsen/P8" target="_blank" rel="noopener noreferrer">GitHub ↗</a></article>
+                <article class="ledger-row reveal"><span class="project-number">P9</span><div><h3>AI Workflows and Integration</h3><p>Working with big data in the football world during my current internship at Ambolt AI.</p></div><span class="project-domain">CURRENT INTERNSHIP</span><a href="https://ambolt.io/" target="_blank" rel="noopener noreferrer">Ambolt AI ↗</a></article>
+            </div>
         </section>
 
-        <section class="work-list page-section">
-            <div class="work-category reveal-on-scroll">
-                <span>Semester Projects</span>
+        <section class="work-collection shell" aria-labelledby="side-projects-title">
+            <header class="collection-header reveal"><div><h2 id="side-projects-title">Side Projects</h2><span>PERSONAL BUILDS</span></div><p>Smaller projects built to learn, experiment, and ship something of my own.</p></header>
+            <div class="project-ledger">
+                <article class="ledger-row reveal"><span class="project-number">S1</span><div><h3>This Website</h3><p>My personal portfolio and an ongoing experiment in visual web interactions.</p></div><span class="project-domain">HTML / CSS / JS</span><a href="https://github.com/Benjafalk/benjafalk.github.io" target="_blank" rel="noopener noreferrer">GitHub ↗</a></article>
+                <article class="ledger-row reveal"><span class="project-number">S2</span><div><h3>Minecraft Biome Classifier</h3><p>A deep-learning course project for classifying Minecraft biomes.</p></div><span class="project-domain">DEEP LEARNING</span><a href="https://github.com/Benjafalk/Deep-Learning-Mini-Project" target="_blank" rel="noopener noreferrer">GitHub ↗</a></article>
             </div>
-            <a class="work-item reveal-on-scroll" href="https://github.com/Tovgaard/P1-UAV" target="_blank" rel="noopener noreferrer">
-                <span>01</span>
-                <div>
-                    <h2>UAV-based Radio Frequency Jammer Locator</h2>
-                    <p>Drone-based localization system for identifying radio frequency interference.</p>
-                </div>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-
-            <a class="work-item reveal-on-scroll" href="https://drive.google.com/file/d/1JX3zSVSBk9-hxAso87DxS3-X6WCmh9Sd/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <span>02</span>
-                <div>
-                    <h2>Local Power Distribution Grid Controller</h2>
-                    <p>Controller work for local power distribution and grid behavior.</p>
-                </div>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-
-            <a class="work-item reveal-on-scroll" href="https://github.com/ReturnOfTheLast/p3_iot_traffic_controller" target="_blank" rel="noopener noreferrer">
-                <span>03</span>
-                <div>
-                    <h2>Detection of Suspicious IP Traffic</h2>
-                    <p>Adaptive traffic control for reducing outgoing suspicious IoT traffic.</p>
-                </div>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-
-            <a class="work-item reveal-on-scroll" href="https://drive.google.com/file/d/1M-RdwOZ2dXBqhgREVgTOY3ppyS0z_VTp/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <span>04</span>
-                <div>
-                    <h2>Securing Water Distribution Networks</h2>
-                    <p>Security-oriented analysis and system design for critical water infrastructure.</p>
-                </div>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-
-            <a class="work-item reveal-on-scroll" href="https://github.com/Ramlov/P5" target="_blank" rel="noopener noreferrer">
-                <span>05</span>
-                <div>
-                    <h2>Intelligent monitoring system for smart grid real-time operations</h2>
-                    <p>Adaptive measurement device access supporting smart grid real-time operations.</p>
-                </div>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-
-            <article class="work-item no-link reveal-on-scroll">
-                <span>06</span>
-                <div>
-                    <h2>Computer Vision for Anti-Fouling Assessment</h2>
-                    <p>Computer vision project for assessing anti-fouling performance. NDA signed with RISE.</p>
-                </div>
-                <i class="fas fa-lock"></i>
-            </article>
-
-            <article class="work-item no-link reveal-on-scroll">
-                <span>07</span>
-                <div>
-                    <h2>Leveraging Synthetic Data For Scalable Anomaly Detection in LEGO Print Inspection</h2>
-                    <p>7th semester project work. NDA signed with LEGO.</p>
-                </div>
-                <i class="fas fa-lock"></i>
-            </article>
-
-            <div class="work-category reveal-on-scroll">
-                <span>Side Projects</span>
-            </div>
-            <a class="work-item reveal-on-scroll" href="https://github.com/Benjafalk/benjafalk.github.io" target="_blank" rel="noopener noreferrer">
-                <span>08</span>
-                <div>
-                    <h2>This Website</h2>
-                    <p>Personal portfolio and experiment space for visual web interactions.</p>
-                </div>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
-
-            <a class="work-item reveal-on-scroll" href="https://github.com/Benjafalk/Deep-Learning-Mini-Project" target="_blank" rel="noopener noreferrer">
-                <span>09</span>
-                <div>
-                    <h2>Minecraft Biome Classifier</h2>
-                    <p>Deep Learning course mini-project for classifying Minecraft biomes.</p>
-                </div>
-                <i class="fas fa-arrow-up-right-from-square"></i>
-            </a>
         </section>
+
+        <section class="work-collection shell" aria-labelledby="professional-work-title">
+            <header class="collection-header reveal"><div><h2 id="professional-work-title">Work</h2><span>PRODUCT + CLIENT</span></div><p>Software I own and professional work delivered outside the university project track.</p></header>
+            <div class="project-ledger">
+                <article class="ledger-row reveal"><span class="project-number">W1</span><div><h3>Cybervagten</h3><p>A cybersecurity product I own and develop.</p></div><span class="project-domain">OWNER / SOFTWARE</span><a href="https://cybervagten.com/" target="_blank" rel="noopener noreferrer">Website ↗</a></article>
+                <article class="ledger-row reveal"><span class="project-number">W2</span><div><h3>Hørning Auto Teknik</h3><p>Client website designed and developed for a local auto workshop.</p></div><span class="project-domain">FREELANCE / WEB</span><a href="https://xn--hrningautoteknik-lxb.dk/" target="_blank" rel="noopener noreferrer">Website ↗</a></article>
+            </div>
+        </section>
+
+        <section class="closing shell reveal"><p>Want to discuss the work?</p><h2>I’m always happy to talk<br>through the engineering.</h2><a class="button button-signal" href="contact.html">Get in touch</a></section>
     </main>
-
-    <footer>
-        <a href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/benjamin.falk.98" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/benjafalk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/Benjafalk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="chatbot.js"></script>
+    <footer class="site-footer shell"><p>Benjamin Falk <span>© <span data-year></span></span></p><div class="social-links"><a class="social-link linkedin" href="https://www.linkedin.com/in/benjamin-falk-b8848a247" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a><a class="social-link facebook" href="https://www.facebook.com/benjamin.falk.98" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a><a class="social-link instagram" href="https://www.instagram.com/benjafalk/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a><a class="social-link github" href="https://github.com/Benjafalk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></div></footer><script src="script.js"></script>
 </body>
 </html>

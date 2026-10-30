@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T14:54:00+01:00",
+  "title": "Design System: Benjamin Falk Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Field Paper",
+        "canonical": "#f3efe5",
+        "tonalRamp": ["oklch(18% 0.012 85)", "oklch(28% 0.018 85)", "oklch(40% 0.024 85)", "oklch(53% 0.03 85)", "oklch(66% 0.036 85)", "oklch(78% 0.04 85)", "oklch(89% 0.035 85)", "oklch(95% 0.022 85)"]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Deep Paper",
+        "canonical": "#e4ded0",
+        "tonalRamp": ["oklch(17% 0.011 82)", "oklch(28% 0.018 82)", "oklch(40% 0.025 82)", "oklch(52% 0.032 82)", "oklch(64% 0.036 82)", "oklch(75% 0.035 82)", "oklch(86% 0.03 82)", "oklch(94% 0.018 82)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Engineering Ink",
+        "canonical": "#141310",
+        "tonalRamp": ["oklch(15% 0.008 80)", "oklch(25% 0.009 80)", "oklch(36% 0.01 80)", "oklch(48% 0.011 80)", "oklch(61% 0.011 80)", "oklch(74% 0.01 80)", "oklch(86% 0.008 80)", "oklch(95% 0.004 80)"]
+      },
+      "muted-graphite": {
+        "role": "neutral",
+        "displayName": "Muted Graphite",
+        "canonical": "#5a574f",
+        "tonalRamp": ["oklch(16% 0.01 82)", "oklch(27% 0.014 82)", "oklch(39% 0.018 82)", "oklch(51% 0.021 82)", "oklch(64% 0.02 82)", "oklch(76% 0.017 82)", "oklch(87% 0.012 82)", "oklch(95% 0.006 82)"]
+      },
+      "safety-orange": {
+        "role": "primary",
+        "displayName": "Safety Orange",
+        "canonical": "#c73a0e",
+        "tonalRamp": ["oklch(15% 0.07 38)", "oklch(26% 0.12 38)", "oklch(38% 0.17 38)", "oklch(50% 0.2 38)", "oklch(62% 0.19 38)", "oklch(74% 0.14 38)", "oklch(86% 0.075 38)", "oklch(95% 0.025 38)"]
+      },
+      "safety-orange-surface": {
+        "role": "primary",
+        "displayName": "Surface Safety Orange",
+        "canonical": "#df4c10",
+        "tonalRamp": ["oklch(15% 0.07 40)", "oklch(27% 0.12 40)", "oklch(39% 0.17 40)", "oklch(52% 0.2 40)", "oklch(64% 0.19 40)", "oklch(76% 0.14 40)", "oklch(87% 0.075 40)", "oklch(95% 0.025 40)"]
+      },
+      "safety-orange-dark": {
+        "role": "primary",
+        "displayName": "Deep Safety Orange",
+        "canonical": "#9f2806",
+        "tonalRamp": ["oklch(14% 0.065 36)", "oklch(24% 0.11 36)", "oklch(35% 0.15 36)", "oklch(47% 0.18 36)", "oklch(59% 0.17 36)", "oklch(72% 0.125 36)", "oklch(85% 0.067 36)", "oklch(95% 0.022 36)"]
+      },
+      "field-white": {
+        "role": "neutral",
+        "displayName": "Field White",
+        "canonical": "#fffdf7",
+        "tonalRamp": ["oklch(18% 0.009 85)", "oklch(30% 0.014 85)", "oklch(43% 0.019 85)", "oklch(56% 0.023 85)", "oklch(69% 0.025 85)", "oklch(81% 0.022 85)", "oklch(91% 0.015 85)", "oklch(98% 0.007 85)"]
+      },
+      "rule-ink": {
+        "role": "neutral",
+        "displayName": "Rule Ink",
+        "canonical": "rgba(20, 19, 16, 0.24)",
+        "tonalRamp": ["rgba(20, 19, 16, 0.92)", "rgba(20, 19, 16, 0.78)", "rgba(20, 19, 16, 0.64)", "rgba(20, 19, 16, 0.50)", "rgba(20, 19, 16, 0.36)", "rgba(20, 19, 16, 0.24)", "rgba(20, 19, 16, 0.14)", "rgba(20, 19, 16, 0.07)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero and page-intro statements." },
+      "headline": { "displayName": "Headline", "purpose": "Major section and collection openings." },
+      "title": { "displayName": "Title", "purpose": "Project, discipline, and role titles." },
+      "body": { "displayName": "Body", "purpose": "Explanatory and narrative copy." },
+      "label": { "displayName": "Instrument Label", "purpose": "Status, dates, domains, and compact metadata." }
+    },
+    "shadows": [
+      { "name": "field-sheet-lift", "value": "18px 22px 45px rgba(20, 19, 16, .13)", "purpose": "Physical lift for the tilted home-page field sheet." },
+      { "name": "logo-response", "value": "7px 9px 20px rgba(20, 19, 16, .2)", "purpose": "Hover and keyboard-focus response on the logo." },
+      { "name": "social-response", "value": "5px 7px 18px rgba(20, 19, 16, .18)", "purpose": "Hover and keyboard-focus response on social links." },
+      { "name": "buddy-bubble-lift", "value": "8px 10px 28px rgba(20, 19, 16, .25)", "purpose": "Strong lift for the open assistant message." },
+      { "name": "buddy-button-lift", "value": "6px 8px 20px rgba(20, 19, 16, .18)", "purpose": "Persistent lift for the floating assistant button." }
+    ],
+    "motion": [
+      { "name": "ease-expressive", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Transforms, reveals, logo motion, and playful interactive responses." },
+      { "name": "state-fast", "value": ".2s ease", "purpose": "Color, border, and simple hover-state transitions." },
+      { "name": "state-transform", "value": ".22s cubic-bezier(.16, 1, .3, 1)", "purpose": "Button, row, social, and assistant movement." },
+      { "name": "content-reveal", "value": ".7s cubic-bezier(.16, 1, .3, 1)", "purpose": "Scroll-triggered opacity, translation, and blur reveal." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "1000px" },
+      { "name": "compact", "value": "700px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Dark Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "The high-confidence primary action used to open the project archive.",
+      "html": "<a class=\"ds-button ds-button-dark\" href=\"#\">View project archive</a>",
+      "css": ".ds-button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; padding: 0 22px; border: 1px solid transparent; font-family: var(--font-body); font-weight: 700; text-decoration: none; transition: background .22s ease, color .22s ease, border-color .22s ease, transform .22s var(--ease); } .ds-button-dark { background: var(--ink); color: var(--white); } .ds-button-dark:hover { background: var(--signal-surface); color: var(--ink); transform: translateY(-2px); } .ds-button-dark:focus-visible { outline: 3px solid var(--signal-surface); outline-offset: 4px; } .ds-button-dark:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Signal Button",
+      "kind": "button",
+      "refersTo": "button-signal",
+      "description": "The orange closing action used after the surrounding content has established context.",
+      "html": "<a class=\"ds-button ds-button-signal\" href=\"#\">Start a conversation</a>",
+      "css": ".ds-button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; padding: 0 22px; border: 1px solid transparent; font-family: var(--font-body); font-weight: 700; text-decoration: none; transition: background .22s ease, color .22s ease, border-color .22s ease, transform .22s var(--ease); } .ds-button-signal { background: var(--signal-surface); color: var(--ink); } .ds-button-signal:hover { background: var(--white); border-color: var(--ink); transform: translateY(-2px); } .ds-button-signal:focus-visible { outline: 3px solid var(--signal-surface); outline-offset: 4px; } .ds-button-signal:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "description": "Compact site navigation with an orange instrument-like active indicator.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary navigation\"><a class=\"ds-nav-link ds-active\" href=\"#\">Home</a><a class=\"ds-nav-link\" href=\"#\">About</a><a class=\"ds-nav-link\" href=\"#\">Work</a><a class=\"ds-nav-link\" href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 30px; } .ds-nav-link { min-height: 44px; display: inline-flex; align-items: center; position: relative; color: var(--muted); font-family: var(--font-body); font-size: .9rem; font-weight: 600; text-decoration: none; } .ds-nav-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: 5px; height: 2px; background: var(--signal-surface); transform: scaleX(0); transform-origin: left; transition: transform .24s var(--ease); } .ds-nav-link:hover, .ds-nav-link.ds-active { color: var(--ink); } .ds-nav-link:hover::after, .ds-nav-link.ds-active::after { transform: scaleX(1); } .ds-nav-link:focus-visible { outline: 3px solid var(--signal-surface); outline-offset: 4px; }"
+    },
+    {
+      "name": "Status Label",
+      "kind": "custom",
+      "description": "A non-interactive instrument label for place, time, or collection context.",
+      "html": "<p class=\"ds-status\"><span aria-hidden=\"true\"></span>AALBORG, DENMARK · 9TH SEMESTER</p>",
+      "css": ".ds-status { display: flex; align-items: center; gap: 9px; margin: 0; color: var(--ink); font-family: var(--font-data); font-size: .72rem; letter-spacing: .07em; line-height: 1.6; text-transform: uppercase; } .ds-status > span { width: 8px; height: 8px; flex: none; border-radius: 50%; background: var(--signal-surface); box-shadow: 0 0 0 5px rgba(223, 76, 16, .12); }"
+    },
+    {
+      "name": "Engineering Field Sheet",
+      "kind": "card",
+      "description": "The signature physical artifact: its trace draws once, then four constrained nodes unlock for mouse, touch, and keyboard manipulation.",
+      "html": "<section class=\"ds-field-sheet\"><div class=\"ds-sheet-tape\" aria-hidden=\"true\"></div><header class=\"ds-sheet-top\"><span>BF / FIELD NOTES</span><span>2026—ONGOING</span></header><div class=\"ds-sheet-trace\"><svg viewBox=\"0 0 260 70\" aria-label=\"Interactive signal trace\"><path d=\"M4 50H56L82 18H132L158 46H208L230 12H256\"/><circle cx=\"56\" cy=\"50\" r=\"4\"/><circle cx=\"132\" cy=\"18\" r=\"4\"/><circle cx=\"208\" cy=\"46\" r=\"4\"/><circle cx=\"230\" cy=\"12\" r=\"4\"/></svg></div><dl class=\"ds-sheet-facts\"><div><dt>NOW</dt><dd>Internship at Ambolt AI</dd></div><div><dt>BUILDING</dt><dd>AI, data & full-stack systems</dd></div></dl></section>",
+      "css": ".ds-field-sheet { position: relative; width: min(440px, 100%); padding: 20px; background: var(--white); color: var(--ink); border: 1px solid var(--ink); box-shadow: 18px 22px 45px rgba(20, 19, 16, .13); transform: rotate(1.4deg); } .ds-sheet-tape { position: absolute; width: 88px; height: 24px; left: 50%; top: -13px; transform: translateX(-50%) rotate(-1deg); background: rgba(255, 90, 31, .38); } .ds-sheet-top { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--ink); font-family: var(--font-data); font-size: .7rem; letter-spacing: .04em; } .ds-sheet-trace { padding: 24px 0; border-bottom: 1px solid var(--ink); } .ds-sheet-trace svg { display: block; width: 100%; } .ds-sheet-trace path { fill: none; stroke: var(--signal-surface); stroke-width: 3; stroke-linecap: square; stroke-linejoin: bevel; } .ds-sheet-trace circle { fill: var(--white); stroke: var(--ink); stroke-width: 2; cursor: grab; } .ds-sheet-facts { margin: 0; } .ds-sheet-facts > div { display: grid; grid-template-columns: 88px 1fr; gap: 18px; padding: 13px 0; border-bottom: 1px solid var(--line); } .ds-sheet-facts dt { font-family: var(--font-data); font-size: .7rem; letter-spacing: .06em; } .ds-sheet-facts dd { margin: 0; font-family: var(--font-body); font-weight: 700; line-height: 1.3; }"
+    },
+    {
+      "name": "Project Ledger Row",
+      "kind": "card",
+      "description": "A rule-bounded project record that reveals a white paper surface on hover.",
+      "html": "<article class=\"ds-ledger-row\"><span class=\"ds-project-number\">P8</span><div><h3>Automatic Censoring of Profanities</h3><p>Automatic, real-time profanity censoring for streamed media.</p></div><span class=\"ds-project-domain\">AI / SOUND</span><a href=\"#\">GitHub ↗</a></article>",
+      "css": ".ds-ledger-row { display: grid; grid-template-columns: 54px minmax(220px, 1fr) 110px auto; gap: 22px; align-items: center; min-height: 124px; padding: 24px 0; color: var(--ink); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); transition: background .2s ease, padding .22s var(--ease); } .ds-ledger-row:hover { padding-inline: 16px; background: var(--white); } .ds-ledger-row h3 { margin: 0 0 8px; font-family: var(--font-display); font-size: 1.45rem; line-height: 1.16; letter-spacing: -.035em; } .ds-ledger-row p { margin: 0; color: var(--muted); font-family: var(--font-body); line-height: 1.6; } .ds-project-number, .ds-project-domain { font-family: var(--font-data); font-size: .72rem; letter-spacing: .055em; } .ds-project-number { align-self: start; padding-top: 5px; color: var(--signal-dark); } .ds-project-domain { color: var(--muted); } .ds-ledger-row a { min-height: 44px; display: inline-flex; align-items: center; color: var(--ink); font-family: var(--font-body); font-weight: 700; white-space: nowrap; } .ds-ledger-row a:focus-visible { outline: 3px solid var(--signal-surface); outline-offset: 4px; }"
+    },
+    {
+      "name": "Social Link",
+      "kind": "button",
+      "refersTo": "social-link",
+      "description": "A square brand link whose color and lift appear only during interaction.",
+      "html": "<a class=\"ds-social-link\" href=\"#\" aria-label=\"LinkedIn\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z\"/></svg></a>",
+      "css": ".ds-social-link { width: 46px; height: 46px; display: grid; place-items: center; border: 1px solid var(--ink); color: var(--ink); text-decoration: none; transition: color .2s ease, background .2s ease, border-color .2s ease, transform .22s var(--ease), box-shadow .22s ease; } .ds-social-link svg { width: 19px; height: 19px; fill: currentColor; } .ds-social-link:hover, .ds-social-link:focus-visible { background: #0a66c2; border-color: #0a66c2; color: #fff; transform: translateY(-3px) rotate(-3deg); box-shadow: 5px 7px 18px rgba(20, 19, 16, .18); } .ds-social-link:focus-visible { outline: 3px solid var(--signal-surface); outline-offset: 4px; } .ds-social-link:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Portfolio Assistant Button",
+      "kind": "button",
+      "refersTo": "buddy-button",
+      "description": "The single circular control and the portfolio's concentrated playful accent.",
+      "html": "<button class=\"ds-buddy-button\" type=\"button\" aria-label=\"Ask the portfolio assistant\"><svg viewBox=\"0 0 40 40\" aria-hidden=\"true\"><rect x=\"7\" y=\"9\" width=\"26\" height=\"23\" rx=\"7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\"/><path d=\"M20 4v5M14 35h12M15 26c2.8 2.2 7.2 2.2 10 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><circle cx=\"15\" cy=\"20\" r=\"2.2\" fill=\"currentColor\"/><circle cx=\"25\" cy=\"20\" r=\"2.2\" fill=\"currentColor\"/></svg></button>",
+      "css": ".ds-buddy-button { width: 58px; height: 58px; display: grid; place-items: center; padding: 0; border: 1px solid var(--ink); border-radius: 50%; background: var(--signal-surface); color: var(--ink); cursor: pointer; box-shadow: 6px 8px 20px rgba(20, 19, 16, .18); transition: transform .22s var(--ease), background .2s ease; } .ds-buddy-button svg { width: 31px; height: 31px; } .ds-buddy-button:hover { transform: translateY(-3px) rotate(-4deg); background: var(--white); } .ds-buddy-button:focus-visible { outline: 3px solid var(--signal-surface); outline-offset: 4px; } .ds-buddy-button:active { transform: translateY(0); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Engineering Field Notes",
+    "overview": "The portfolio feels like an engineer's working notebook refined for public view: precise, pragmatic, tactile, modern, and professionally technical. Warm paper, dense ink, ruled separators, clipped data labels, and a focused safety-orange signal family make the work feel observed and recorded rather than decorated.\n\nThe system is crisp and confident. Large typography carries the hierarchy; mono labels and ledger structures supply technical specificity; subtle paper grain keeps flat surfaces physical. A contrast-aware orange pair separates accent text from filled or ink-backed signals. Personality is concentrated in a few purposeful artifacts—the tilted field sheet, reactive logo, social links, and assistant—so the portfolio remains credible and easy to scan.",
+    "keyCharacteristics": [
+      "Warm paper canvas with visible but restrained texture.",
+      "Oversized Manrope headlines paired with calm DM Sans body copy and Roboto Mono data labels.",
+      "Contrast-aware safety oranges used as signals, not general surface color.",
+      "Separator-led layouts, square controls, and sparse, intentional lift.",
+      "Responsive structures that collapse cleanly while preserving the ledger-like rhythm."
+    ],
+    "rules": [
+      { "name": "The Signal, Not Paint Rule", "body": "Safety Orange is for text on paper; Surface Safety Orange is for fills, rules, focus, and text on ink. Neither becomes a broad decorative background.", "section": "colors" },
+      { "name": "The Instrument Label Rule", "body": "Reserve monospace for operational metadata; never use it for long prose or large promotional headlines.", "section": "typography" },
+      { "name": "The Reserved Lift Rule", "body": "If an element is not a physical artifact or a playful interactive response, keep it flat and separate it with a rule or tonal shift.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do build hierarchy with oversized Manrope, ruled rows, and clear spacing before adding containers.",
+      "Do keep body copy in Muted Graphite and constrain readable passages to roughly 58–68 characters.",
+      "Do use Safety Orange for emphasis text on paper and Surface Safety Orange for active states, fills, focus, and text on ink.",
+      "Do preserve 44px minimum targets, visible focus outlines, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't introduce rounded cards, pill controls, gradient washes, or soft dashboard chrome.",
+      "Don't add shadows to ordinary sections, ledgers, or text containers.",
+      "Don't turn Roboto Mono into a body or display face.",
+      "Don't invent form fields or input styling until an implemented form establishes those primitives."
+    ]
+  }
+}
