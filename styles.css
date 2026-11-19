@@ -238,10 +238,14 @@ p { text-wrap: pretty; }
 .experience { padding-top: 30px; }
 .experience-list { border-top: 1px solid var(--ink); }
 .experience-row { display: grid; grid-template-columns: 210px minmax(0, 1fr) 50px; gap: 34px; align-items: start; padding: 34px 0; border-bottom: 1px solid var(--ink); }
+.experience-row-grouped { grid-template-columns: 210px minmax(0, 1fr); }
+.experience-projects { display: grid; gap: 28px; }
+.experience-project { display: grid; grid-template-columns: minmax(0, 1fr) 50px; gap: 34px; align-items: start; }
+.experience-project + .experience-project { padding-top: 28px; border-top: 1px solid var(--line); }
 .experience-row h3 { margin-bottom: 10px; font-size: clamp(1.5rem, 2.7vw, 2.4rem); }
 .experience-row div p { max-width: 65ch; margin: 0; color: var(--muted); }
-.experience-row > a { min-width: 44px; min-height: 44px; display: grid; place-items: center; justify-self: end; border: 1px solid var(--ink); text-decoration: none; transition: background .2s ease, color .2s ease, transform .2s var(--ease); }
-.experience-row > a:hover { background: var(--signal-surface); transform: translate(2px, -2px); }
+.experience-row > a, .experience-project > a { min-width: 44px; min-height: 44px; display: grid; place-items: center; justify-self: end; border: 1px solid var(--ink); text-decoration: none; transition: background .2s ease, color .2s ease, transform .2s var(--ease); }
+.experience-row > a:hover, .experience-project > a:hover { background: var(--signal-surface); transform: translate(2px, -2px); }
 
 .work-collection { padding-block: 125px; }
 .work-collection h2, .experience h2 { scroll-margin-top: 32px; }
@@ -336,6 +340,10 @@ p { text-wrap: pretty; }
     .experience-row .role-meta { grid-column: 1; }
     .experience-row > div { grid-column: 1; }
     .experience-row > a { grid-column: 2; grid-row: 1 / 3; }
+    .experience-row-grouped { grid-template-columns: 1fr; }
+    .experience-row-grouped > .experience-projects { grid-column: 1; }
+    .experience-project { grid-template-columns: minmax(0, 1fr) 44px; gap: 18px; }
+    .experience-project > a { grid-column: 2; grid-row: 1; }
     .work-collection, .work-collection + .work-collection { padding-block: 78px; }
     .collection-header > div { align-items: flex-end; justify-content: space-between; gap: 12px; }
     .collection-header h2 { font-size: clamp(2.35rem, 11vw, 3.4rem); overflow-wrap: anywhere; }
